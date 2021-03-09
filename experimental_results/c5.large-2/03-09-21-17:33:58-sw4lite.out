@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------
+[[15132,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-3-141
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+* Processing the grid command...
+* Changing x from 0 to 1270 to be consistent with h=10
+* Changing z from 0 to 5110 to be consistent with h=10
+* Changing y from 0 to 1270 to be consistent with h=10
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=1270 ymax=1270 zmin = 0 zmax=5110
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0        10       128       128       512      8388608
+Total number of grid points (without ghost points): 8.38861e+06
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: basic-results/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+Fatal input error: Error: basic-results/ is not a directory
+
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[ip-172-31-3-141:16371] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-3-141:16371] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

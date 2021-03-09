@@ -1,0 +1,129 @@
+--------------------------------------------------------------------------
+[[18754,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-3-141
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+       __                __                 
+      / /   ____  ____  / /_  ____  _____   
+     / /   / __ `/ __ `/ __ \/ __ \/ ___/ 
+    / /___/ /_/ / /_/ / / / / /_/ (__  )    
+   /_____/\__,_/\__, /_/ /_/\____/____/  
+               /____/                       
+
+Options used:
+   --dimension 3
+   --mesh data/rectangle01_quad.mesh
+   --refine-serial 2
+   --refine-parallel 0
+   --cartesian-partitioning ''
+   --problem 3
+   --order-kinematic 2
+   --order-thermo 1
+   --order-intrule -1
+   --ode-solver 4
+   --t-final 5
+   --cfl 0.5
+   --cg-tol 1e-08
+   --ftz-tol 0
+   --cg-max-steps 300
+   --max-steps -1
+   --partial-assembly
+   --no-impose-viscosity
+   --no-visualization
+   --visualization-steps 5
+   --no-visit
+   --no-print
+   --outputfilename results/Laghos
+   --partition 0
+   --device cpu
+   --no-checks
+   --no-mem
+   --no-fom
+   --no-gpu-aware-mpi
+   --dev 0
+Device configuration: cpu
+Memory configuration: host-std
+Number of zones in the serial mesh: 336
+Non-Cartesian partitioning through METIS will be used.
+Zones min/max: 168 168
+Number of kinematic (position, velocity) dofs: 2850
+Number of specific internal energy dofs: 1344
+[PI-INFO] Init time,0,0.018555
+[PI-INFO] Init time,1,0.018486
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,1,0.045742,0.027187
+[PI-INFO] Paramount Iteration,1,1,0.045645,0.027159
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,2,0.073429,0.027687
+[PI-INFO] Paramount Iteration,1,2,0.073322,0.027677
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,3,0.100881,0.027452
+[PI-INFO] Paramount Iteration,1,3,0.100777,0.027455
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,4,0.128258,0.027377
+[PI-INFO] Paramount Iteration,1,4,0.128158,0.027381
+[PI-INFO] Paramount Iteration,0,5,0.155531,0.027273
+[PI-INFO] Paramount Iteration,1,5,0.155443,0.027285
+Repeating step 2
+[PI-INFO] Paramount Iteration,0,6,0.183639,0.028108
+[PI-INFO] Paramount Iteration,1,6,0.183530,0.028087
+[PI-INFO] Paramount Iteration,0,7,0.212706,0.029067
+[PI-INFO] Paramount Iteration,1,7,0.212609,0.029079
+Repeating step 3
+[PI-INFO] Paramount Iteration,0,8,0.241006,0.028300
+[PI-INFO] Paramount Iteration,1,8,0.240898,0.028289
+[PI-INFO] Paramount Iteration,0,9,0.269329,0.028323
+[PI-INFO] Paramount Iteration,1,9,0.269240,0.028342
+[PI-INFO] Paramount Iteration,0,10,0.297086,0.027757
+[PI-INFO] Paramount Iteration,1,10,0.297003,0.027763
+step     5,	t = 0.0476,	dt = 0.008554,	|e| = 4.7764852179e+01
+[PI-INFO] Paramount Iteration,0,11,0.325545,0.028459
+[PI-INFO] Paramount Iteration,1,11,0.325477,0.028474
+Repeating step 6
+[PI-INFO] Paramount Iteration,0,12,0.353577,0.028032
+[PI-INFO] Paramount Iteration,1,12,0.353467,0.027990
+[PI-INFO] Paramount Iteration,0,13,0.381943,0.028366
+[PI-INFO] Paramount Iteration,1,13,0.381853,0.028386
+[PI-INFO] Paramount Iteration,0,14,0.409940,0.027997
+[PI-INFO] Paramount Iteration,1,14,0.409872,0.028019
+[PI-INFO] Paramount Iteration,0,15,0.437626,0.027686
+[PI-INFO] PI avg,0,0.027938,15
+[PI-INFO] Beta,0,0.000036
+[PI-INFO] Total time,0.437641
+[PI-INFO] Paramount Iteration,1,15,0.437548,0.027676
+[PI-INFO] PI avg,1,0.027937,15
+[PI-INFO] Beta,1,0.000050
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-3-141 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-3-141:19885] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-3-141:19885] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

@@ -1,0 +1,90 @@
+--------------------------------------------------------------------------
+[[15164,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-3-141
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+miniqmc git branch: HEAD
+miniqmc git commit: a76fb2ca42e30f32fc97e54352a380ee541ca2fa
+
+Number of orbitals/splines = 192
+Tile size = 192
+Number of tiles = 1
+Number of electrons = 384
+Rmax = 1.7
+Iterations = 10000
+OpenMP threads = 1
+MPI processes = 2
+
+SPO coefficients size = 98304000 bytes (93.75 MB)
+Using SoA distance table, Jastrow + einspline, 
+and determinant update.
+[PI-INFO] Init time,1,0.416430
+[PI-INFO] Init time,0,0.434398
+[PI-INFO] Paramount Iteration,1,1,0.473880,0.057450
+[PI-INFO] Paramount Iteration,0,1,0.492936,0.058538
+[PI-INFO] Paramount Iteration,1,2,0.533118,0.059238
+[PI-INFO] Paramount Iteration,0,2,0.553222,0.060286
+[PI-INFO] Paramount Iteration,1,3,0.593491,0.060373
+[PI-INFO] Paramount Iteration,0,3,0.614888,0.061666
+[PI-INFO] Paramount Iteration,1,4,0.652282,0.058791
+[PI-INFO] Paramount Iteration,0,4,0.674005,0.059117
+[PI-INFO] Paramount Iteration,1,5,0.729581,0.077299
+[PI-INFO] Paramount Iteration,0,5,0.752480,0.078475
+[PI-INFO] Paramount Iteration,1,6,0.799722,0.070141
+[PI-INFO] Paramount Iteration,0,6,0.823551,0.071071
+[PI-INFO] Paramount Iteration,1,7,0.870968,0.071246
+[PI-INFO] Paramount Iteration,0,7,0.895358,0.071807
+[PI-INFO] Paramount Iteration,1,8,0.947000,0.076032
+[PI-INFO] Paramount Iteration,0,8,0.972667,0.077309
+[PI-INFO] Paramount Iteration,1,9,1.036226,0.089226
+[PI-INFO] Paramount Iteration,0,9,1.064086,0.091419
+[PI-INFO] Paramount Iteration,1,10,1.109449,0.073223
+[PI-INFO] Paramount Iteration,0,10,1.139046,0.074960
+[PI-INFO] Paramount Iteration,1,11,1.181532,0.072083
+[PI-INFO] Paramount Iteration,0,11,1.212717,0.073671
+[PI-INFO] Paramount Iteration,1,12,1.270315,0.088783
+[PI-INFO] Paramount Iteration,0,12,1.303991,0.091274
+[PI-INFO] Paramount Iteration,1,13,1.370841,0.100526
+[PI-INFO] Paramount Iteration,0,13,1.407468,0.103477
+[PI-INFO] Paramount Iteration,1,14,1.454574,0.083733
+[PI-INFO] Paramount Iteration,0,14,1.493848,0.086380
+[PI-INFO] Paramount Iteration,1,15,1.530394,0.075820
+[PI-INFO] PI avg,1,0.074264,15
+[PI-INFO] Beta,1,0.000028
+[PI-INFO] Paramount Iteration,0,15,1.571732,0.077884
+[PI-INFO] PI avg,0,0.075822,15
+[PI-INFO] Beta,0,0.000028
+[PI-INFO] Total time,1.571763
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-3-141 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-3-141:16339] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-3-141:16339] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
