@@ -20,4 +20,4 @@ args=("$@")
 
 arg_parse
 init_cluster
-end_cluster
+#end_cluster

@@ -20,14 +20,17 @@ args=("$@")
 arg_parse
 init_cluster
 
+results_dir=${dest}/experimental_results/${type_vm}-${num_vm}
+results=node-*/home/ubuntu/PI-Bench/ECP-Proxy-Apps/exp-results/*
+
 for ((i=0; i<len; i++)); do
-  results_dir=${dest}/experimental_results/${type_vm}-${num_vm}/$(date +"%m-%d-%y-%T")
-  results=node-*/home/ubuntu/PI-Bench/ECP-Proxy-Apps/exp-results/*
   clapp cluster action ${cluster_id} ${bench_name}-group run --extra "num_n=${num_vm}"
-  clapp cluster action ${cluster_id} ${bench_name}-group fetch-results --extra "dir=${dest}/execution-scripts"
-  mkdir -p ${results_dir}
-  mv ${results} ${results_dir}
 done
+
+clapp cluster action ${cluster_id} ${bench_name}-group fetch-results --extra "dir=${dest}/execution-scripts"
+
+mkdir -fp ${results_dir}
+mv ${results} ${results_dir}
 
 clapp cluster stop ${cluster_id}
 rm -r node*
