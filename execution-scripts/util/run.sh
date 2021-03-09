@@ -29,8 +29,7 @@ done
 
 clapp cluster action ${cluster_id} ${bench_name}-group fetch-results --extra "dir=${dest}/execution-scripts"
 
-mkdir -fp ${results_dir}
+mkdir ${results_dir}
 mv ${results} ${results_dir}
 
 clapp cluster stop ${cluster_id}
-rm -r node*
