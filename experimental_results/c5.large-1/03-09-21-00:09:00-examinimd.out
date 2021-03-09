@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------
+[[49494,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-9-248
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 40 0 40 0 40 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 256000 256000
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232820 0.000000 0.000000e+00
+[PI-INFO] Init time,0,1.748311
+[PI-INFO] Paramount Iteration,0,1,1.901105,0.152794
+[PI-INFO] Paramount Iteration,0,2,2.054296,0.153191
+[PI-INFO] Paramount Iteration,0,3,2.207904,0.153608
+[PI-INFO] Paramount Iteration,0,4,2.361456,0.153552
+[PI-INFO] Paramount Iteration,0,5,2.515183,0.153727
+[PI-INFO] Paramount Iteration,0,6,2.668495,0.153312
+[PI-INFO] Paramount Iteration,0,7,2.821984,0.153489
+[PI-INFO] Paramount Iteration,0,8,2.976715,0.154731
+[PI-INFO] Paramount Iteration,0,9,3.133597,0.156882
+10 1.266844 -6.133420 -4.233161 1.709244 1.497738e+06
+[PI-INFO] Paramount Iteration,0,10,3.457578,0.323981
+[PI-INFO] Paramount Iteration,0,11,3.622656,0.165078
+[PI-INFO] Paramount Iteration,0,12,3.793078,0.170422
+[PI-INFO] Paramount Iteration,0,13,3.968561,0.175483
+[PI-INFO] Paramount Iteration,0,14,4.147973,0.179412
+[PI-INFO] Paramount Iteration,0,15,4.331525,0.183552
+[PI-INFO] PI avg,0,0.172214,15
+[PI-INFO] Beta,0,0.000009
+[PI-INFO] Total time,4.331548
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-9-248 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------

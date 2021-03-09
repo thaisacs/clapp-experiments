@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------
+[[48664,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-9-248
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+* Processing the grid command...
+* Changing x from 0 to 1270 to be consistent with h=10
+* Changing z from 0 to 5110 to be consistent with h=10
+* Changing y from 0 to 1270 to be consistent with h=10
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=1270 ymax=1270 zmin = 0 zmax=5110
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0        10       128       128       512      8388608
+Total number of grid points (without ghost points): 8.38861e+06
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: basic-results/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.00265361
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+starting at time 0 at cycle 1
+[PI-INFO] Init time,0,1.048176
+Time step 1 t= 0.00265361
+[PI-INFO] Paramount Iteration,0,1,4.338997,3.290821
+[PI-INFO] Paramount Iteration,0,2,7.620828,3.281831
+[PI-INFO] Paramount Iteration,0,3,10.901972,3.281144
+[PI-INFO] Paramount Iteration,0,4,14.179346,3.277374
+[PI-INFO] Paramount Iteration,0,5,17.461360,3.282014
+[PI-INFO] Paramount Iteration,0,6,20.748485,3.287125
+[PI-INFO] Paramount Iteration,0,7,24.039380,3.290895
+[PI-INFO] Paramount Iteration,0,8,27.324668,3.285288
+[PI-INFO] Paramount Iteration,0,9,30.606881,3.282213
+[PI-INFO] Paramount Iteration,0,10,33.890348,3.283467
+[PI-INFO] Paramount Iteration,0,11,37.177021,3.286673
+[PI-INFO] Paramount Iteration,0,12,40.458672,3.281651
+[PI-INFO] Paramount Iteration,0,13,43.744519,3.285847
+[PI-INFO] Paramount Iteration,0,14,47.027587,3.283068
+[PI-INFO] Paramount Iteration,0,15,50.305976,3.278389
+[PI-INFO] PI avg,0,3.283853,15
+[PI-INFO] Beta,0,0.000001
+[PI-INFO] Total time,50.306003
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-9-248 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
