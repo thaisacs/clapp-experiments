@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------
+[[40683,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-6-127
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Number of blocks at level 0 at timestep 0 is 2
+Number of blocks at level 1 at timestep 0 is 0
+Number of blocks at level 2 at timestep 0 is 0
+Number of blocks at level 3 at timestep 0 is 0
+Number of blocks at level 4 at timestep 0 is 0
+Number of blocks at level 5 at timestep 0 is 0
+Total number of blocks at timestep 0 is 2
+
+[PI-INFO] Init time,0,0.393161
+[PI-INFO] Init time,1,0.384785
+[PI-INFO] Paramount Iteration,0,1,0.401888,0.008727
+[PI-INFO] Paramount Iteration,1,1,0.393611,0.008826
+[PI-INFO] Paramount Iteration,0,2,0.410551,0.008663
+[PI-INFO] Paramount Iteration,1,2,0.402292,0.008681
+[PI-INFO] Paramount Iteration,0,3,0.419106,0.008555
+[PI-INFO] Paramount Iteration,1,3,0.410849,0.008557
+[PI-INFO] Paramount Iteration,0,4,0.427708,0.008602
+[PI-INFO] Paramount Iteration,1,4,0.419445,0.008596
+Number of blocks at level 0 at timestep 5 is 2
+Number of blocks at level 1 at timestep 5 is 0
+Number of blocks at level 2 at timestep 5 is 0
+Number of blocks at level 3 at timestep 5 is 0
+Number of blocks at level 4 at timestep 5 is 0
+Number of blocks at level 5 at timestep 5 is 0
+Total number of blocks at timestep 5 is 2
+
+[PI-INFO] Paramount Iteration,0,5,0.438028,0.010320
+[PI-INFO] Paramount Iteration,1,5,0.429742,0.010297
+[PI-INFO] Paramount Iteration,0,6,0.446562,0.008534
+[PI-INFO] Paramount Iteration,1,6,0.438292,0.008550
+[PI-INFO] Paramount Iteration,0,7,0.455207,0.008645
+[PI-INFO] Paramount Iteration,1,7,0.446938,0.008646
+[PI-INFO] Paramount Iteration,0,8,0.463793,0.008586
+[PI-INFO] Paramount Iteration,1,8,0.455530,0.008592
+[PI-INFO] Paramount Iteration,0,9,0.472431,0.008638
+[PI-INFO] Paramount Iteration,1,9,0.464171,0.008641
+Number of blocks at level 0 at timestep 10 is 2
+Number of blocks at level 1 at timestep 10 is 0
+Number of blocks at level 2 at timestep 10 is 0
+Number of blocks at level 3 at timestep 10 is 0
+Number of blocks at level 4 at timestep 10 is 0
+Number of blocks at level 5 at timestep 10 is 0
+Total number of blocks at timestep 10 is 2
+
+[PI-INFO] Paramount Iteration,0,10,0.482708,0.010277
+[PI-INFO] Paramount Iteration,1,10,0.474422,0.010251
+[PI-INFO] Paramount Iteration,0,11,0.491196,0.008488
+[PI-INFO] Paramount Iteration,1,11,0.482927,0.008505
+[PI-INFO] Paramount Iteration,0,12,0.499786,0.008590
+[PI-INFO] Paramount Iteration,1,12,0.491521,0.008594
+[PI-INFO] Paramount Iteration,0,13,0.508394,0.008608
+[PI-INFO] Paramount Iteration,1,13,0.500131,0.008610
+[PI-INFO] Paramount Iteration,0,14,0.516920,0.008526
+[PI-INFO] Paramount Iteration,1,14,0.508652,0.008521
+Number of blocks at level 0 at timestep 15 is 2
+Number of blocks at level 1 at timestep 15 is 0
+Number of blocks at level 2 at timestep 15 is 0
+Number of blocks at level 3 at timestep 15 is 0
+Number of blocks at level 4 at timestep 15 is 0
+Number of blocks at level 5 at timestep 15 is 0
+Total number of blocks at timestep 15 is 2
+
+[PI-INFO] Paramount Iteration,0,15,0.527285,0.010365
+[PI-INFO] PI avg,0,0.008942,15
+[PI-INFO] Beta,0,0.000044
+[PI-INFO] Total time,0.527291
+[PI-INFO] Paramount Iteration,1,15,0.518989,0.010337
+[PI-INFO] PI avg,1,0.008947,15
+[PI-INFO] Beta,1,0.000135
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-6-127 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-6-127:17630] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-6-127:17630] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./ma.x --num_tsteps 100000 --npx 2"
+	User time (seconds): 0.28
+	System time (seconds): 0.18
+	Percent of CPU this job got: 15%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 356964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 90753
+	Voluntary context switches: 865
+	Involuntary context switches: 17
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

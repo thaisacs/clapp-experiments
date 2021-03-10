@@ -1,0 +1,137 @@
+--------------------------------------------------------------------------
+[[40118,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-6-127
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 19
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Nuclide Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     11,303
+Particle Histories:           500,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+MPI Ranks:                    2
+OMP Threads per MPI Rank:     1
+Mem Usage per MPI Rank (MB):  184
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+[PI-INFO] Init time,1,0.721145
+[PI-INFO] Paramount Iteration,1,1,0.722297,0.001152
+Intializing material data...
+Intialization complete. Allocated 184 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+[PI-INFO] Init time,0,0.730248
+[PI-INFO] Paramount Iteration,1,2,0.723122,0.000825
+[PI-INFO] Paramount Iteration,0,1,0.731343,0.001095
+[PI-INFO] Paramount Iteration,1,3,0.723739,0.000617
+[PI-INFO] Paramount Iteration,1,4,0.724411,0.000672
+[PI-INFO] Paramount Iteration,0,2,0.732186,0.000843
+[PI-INFO] Paramount Iteration,1,5,0.724853,0.000442
+[PI-INFO] Paramount Iteration,0,3,0.732790,0.000604
+[PI-INFO] Paramount Iteration,1,6,0.725560,0.000707
+[PI-INFO] Paramount Iteration,0,4,0.733479,0.000689
+[PI-INFO] Paramount Iteration,1,7,0.726185,0.000625
+[PI-INFO] Paramount Iteration,0,5,0.733935,0.000456
+[PI-INFO] Paramount Iteration,1,8,0.726788,0.000603
+[PI-INFO] Paramount Iteration,0,6,0.734636,0.000701
+[PI-INFO] Paramount Iteration,1,9,0.727400,0.000612
+[PI-INFO] Paramount Iteration,0,7,0.735264,0.000628
+[PI-INFO] Paramount Iteration,0,8,0.735830,0.000566
+[PI-INFO] Paramount Iteration,1,10,0.728175,0.000775
+[PI-INFO] Paramount Iteration,0,9,0.736413,0.000583
+[PI-INFO] Paramount Iteration,1,11,0.728911,0.000736
+[PI-INFO] Paramount Iteration,1,12,0.729486,0.000575
+[PI-INFO] Paramount Iteration,0,10,0.737208,0.000795
+[PI-INFO] Paramount Iteration,1,13,0.729975,0.000489
+[PI-INFO] Paramount Iteration,0,11,0.737926,0.000718
+[PI-INFO] Paramount Iteration,1,14,0.730728,0.000753
+[PI-INFO] Paramount Iteration,0,12,0.738490,0.000564
+[PI-INFO] Paramount Iteration,1,15,0.731218,0.000490
+[PI-INFO] PI avg,1,0.000672,15
+[PI-INFO] Beta,1,0.001183
+[PI-INFO] Paramount Iteration,0,13,0.738965,0.000475
+[PI-INFO] Paramount Iteration,0,14,0.739655,0.000690
+[PI-INFO] Paramount Iteration,0,15,0.740106,0.000451
+[PI-INFO] PI avg,0,0.000657,15
+[PI-INFO] Beta,0,0.001306
+[PI-INFO] Total time,0.740119
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-6-127 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-6-127:18051] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-6-127:18051] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./XSBench -G nuclide -s large"
+	User time (seconds): 0.57
+	System time (seconds): 0.11
+	Percent of CPU this job got: 20%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 199940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 51727
+	Voluntary context switches: 846
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
