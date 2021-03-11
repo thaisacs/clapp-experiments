@@ -1,0 +1,652 @@
+--------------------------------------------------------------------------
+[[51461,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-6-19
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Initializing redistribution using a pencil layout on 2 ranks.
+distribution 1D: [2:1:1]
+distribution 3D: [2:1:1]
+distribution 2z: [2:1:1]
+distribution 2x: [1:2:1]
+distribution 2y: [2:1:1]
+DFFT  init  max 2.717e-01s  avg 2.527e-01s  min 2.336e-01s  dev 1.900e-02s
+
+Hex representations of double precision floats
+0.000000e+00 = 0
+1.000000e+00 = 3ff0000000000000
+2097152.000000 = 4140000000000000
+
+[PI-INFO] Init time,0,0.424851
+
+TESTING 0
+
+[PI-INFO] Init time,1,0.416292
+DFFT  fd32  max 4.375e-02s  avg 3.843e-02s  min 3.311e-02s  dev 5.320e-03s
+DFFT  f1dx  max 4.887e-03s  avg 4.842e-03s  min 4.798e-03s  dev 4.427e-05s
+DFFT  fd23  max 3.378e-02s  avg 2.870e-02s  min 2.363e-02s  dev 5.075e-03s
+DFFT  fd32  max 1.739e-02s  avg 1.722e-02s  min 1.706e-02s  dev 1.628e-04s
+DFFT  f1dy  max 4.898e-03s  avg 4.868e-03s  min 4.839e-03s  dev 2.933e-05s
+DFFT  fd23  max 1.258e-02s  avg 1.240e-02s  min 1.221e-02s  dev 1.834e-04s
+DFFT  fd32  max 8.473e-03s  avg 8.243e-03s  min 8.013e-03s  dev 2.298e-04s
+DFFT  f1dz  max 4.898e-03s  avg 4.892e-03s  min 4.887e-03s  dev 5.789e-06s
+DFFT fdist  max 1.160e-01s  avg 1.050e-01s  min 9.402e-02s  dev 1.097e-02s
+DFFT fdfft  max 1.468e-02s  avg 1.460e-02s  min 1.452e-02s  dev 7.938e-05s
+FORWARD     max 1.328e-01s  avg 1.327e-01s  min 1.327e-01s  dev 2.922e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.829e-03s  avg 4.732e-03s  min 4.635e-03s  dev 9.669e-05s
+DFFT  bd23  max 8.835e-03s  avg 8.585e-03s  min 8.335e-03s  dev 2.500e-04s
+DFFT  bd32  max 1.070e-02s  avg 1.034e-02s  min 9.976e-03s  dev 3.594e-04s
+DFFT  b1dy  max 4.855e-03s  avg 4.848e-03s  min 4.841e-03s  dev 7.201e-06s
+DFFT  bd23  max 1.238e-02s  avg 1.219e-02s  min 1.200e-02s  dev 1.882e-04s
+DFFT  bd32  max 3.426e-02s  avg 2.917e-02s  min 2.408e-02s  dev 5.088e-03s
+DFFT  b1dx  max 4.962e-03s  avg 4.952e-03s  min 4.942e-03s  dev 1.028e-05s
+DFFT  bd23  max 3.609e-02s  avg 3.019e-02s  min 2.429e-02s  dev 5.899e-03s
+DFFT bdist  max 1.023e-01s  avg 9.047e-02s  min 7.869e-02s  dev 1.178e-02s
+DFFT bdfft  max 1.465e-02s  avg 1.453e-02s  min 1.442e-02s  dev 1.142e-04s
+BACKWARD    max 1.189e-01s  avg 1.189e-01s  min 1.189e-01s  dev 1.825e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,1,0.685042,0.260191
+
+TESTING 1
+
+[PI-INFO] Paramount Iteration,1,1,0.676417,0.260126
+DFFT  fd32  max 3.241e-02s  avg 2.758e-02s  min 2.274e-02s  dev 4.836e-03s
+DFFT  f1dx  max 4.735e-03s  avg 4.676e-03s  min 4.617e-03s  dev 5.911e-05s
+DFFT  fd23  max 3.156e-02s  avg 2.734e-02s  min 2.313e-02s  dev 4.217e-03s
+DFFT  fd32  max 9.583e-03s  avg 9.444e-03s  min 9.306e-03s  dev 1.385e-04s
+DFFT  f1dy  max 4.809e-03s  avg 4.799e-03s  min 4.789e-03s  dev 9.781e-06s
+DFFT  fd23  max 1.246e-02s  avg 1.225e-02s  min 1.204e-02s  dev 2.121e-04s
+DFFT  fd32  max 8.382e-03s  avg 8.129e-03s  min 7.876e-03s  dev 2.533e-04s
+DFFT  f1dz  max 4.928e-03s  avg 4.915e-03s  min 4.902e-03s  dev 1.339e-05s
+DFFT fdist  max 9.440e-02s  avg 8.475e-02s  min 7.509e-02s  dev 9.657e-03s
+DFFT fdfft  max 1.447e-02s  avg 1.439e-02s  min 1.431e-02s  dev 8.228e-05s
+FORWARD     max 1.109e-01s  avg 1.109e-01s  min 1.109e-01s  dev 7.905e-07s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.763e-03s  avg 4.587e-03s  min 4.411e-03s  dev 1.762e-04s
+DFFT  bd23  max 8.629e-03s  avg 8.445e-03s  min 8.261e-03s  dev 1.842e-04s
+DFFT  bd32  max 1.016e-02s  avg 9.828e-03s  min 9.496e-03s  dev 3.321e-04s
+DFFT  b1dy  max 4.780e-03s  avg 4.771e-03s  min 4.762e-03s  dev 8.687e-06s
+DFFT  bd23  max 1.245e-02s  avg 1.226e-02s  min 1.207e-02s  dev 1.883e-04s
+DFFT  bd32  max 3.440e-02s  avg 2.913e-02s  min 2.387e-02s  dev 5.266e-03s
+DFFT  b1dx  max 4.836e-03s  avg 4.829e-03s  min 4.822e-03s  dev 7.279e-06s
+DFFT  bd23  max 3.574e-02s  avg 3.020e-02s  min 2.466e-02s  dev 5.542e-03s
+DFFT bdist  max 1.014e-01s  avg 8.987e-02s  min 7.835e-02s  dev 1.151e-02s
+DFFT bdfft  max 1.438e-02s  avg 1.419e-02s  min 1.399e-02s  dev 1.922e-04s
+BACKWARD    max 1.178e-01s  avg 1.177e-01s  min 1.177e-01s  dev 2.349e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,2,0.921814,0.236772
+
+TESTING 2
+
+[PI-INFO] Paramount Iteration,1,2,0.913204,0.236787
+DFFT  fd32  max 3.472e-02s  avg 2.944e-02s  min 2.416e-02s  dev 5.282e-03s
+DFFT  f1dx  max 4.981e-03s  avg 4.932e-03s  min 4.882e-03s  dev 4.945e-05s
+DFFT  fd23  max 3.404e-02s  avg 2.900e-02s  min 2.397e-02s  dev 5.035e-03s
+DFFT  fd32  max 1.029e-02s  avg 1.001e-02s  min 9.727e-03s  dev 2.814e-04s
+DFFT  f1dy  max 4.980e-03s  avg 4.822e-03s  min 4.663e-03s  dev 1.584e-04s
+DFFT  fd23  max 1.298e-02s  avg 1.244e-02s  min 1.190e-02s  dev 5.416e-04s
+DFFT  fd32  max 8.985e-03s  avg 8.553e-03s  min 8.121e-03s  dev 4.323e-04s
+DFFT  f1dz  max 5.012e-03s  avg 4.964e-03s  min 4.917e-03s  dev 4.749e-05s
+DFFT fdist  max 1.010e-01s  avg 8.945e-02s  min 7.788e-02s  dev 1.157e-02s
+DFFT fdfft  max 1.478e-02s  avg 1.472e-02s  min 1.466e-02s  dev 6.145e-05s
+FORWARD     max 1.181e-01s  avg 1.181e-01s  min 1.181e-01s  dev 2.898e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.856e-03s  avg 4.718e-03s  min 4.580e-03s  dev 1.380e-04s
+DFFT  bd23  max 9.119e-03s  avg 8.847e-03s  min 8.576e-03s  dev 2.719e-04s
+DFFT  bd32  max 1.085e-02s  avg 1.054e-02s  min 1.023e-02s  dev 3.072e-04s
+DFFT  b1dy  max 4.946e-03s  avg 4.892e-03s  min 4.839e-03s  dev 5.302e-05s
+DFFT  bd23  max 1.251e-02s  avg 1.235e-02s  min 1.218e-02s  dev 1.614e-04s
+DFFT  bd32  max 3.428e-02s  avg 2.912e-02s  min 2.396e-02s  dev 5.160e-03s
+DFFT  b1dx  max 4.839e-03s  avg 4.731e-03s  min 4.623e-03s  dev 1.081e-04s
+DFFT  bd23  max 3.571e-02s  avg 3.023e-02s  min 2.476e-02s  dev 5.476e-03s
+DFFT bdist  max 1.025e-01s  avg 9.108e-02s  min 7.971e-02s  dev 1.138e-02s
+DFFT bdfft  max 1.442e-02s  avg 1.434e-02s  min 1.426e-02s  dev 8.292e-05s
+BACKWARD    max 1.191e-01s  avg 1.191e-01s  min 1.191e-01s  dev 2.362e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,3,1.167150,0.245336
+
+TESTING 3
+
+[PI-INFO] Paramount Iteration,1,3,1.158535,0.245331
+DFFT  fd32  max 3.544e-02s  avg 3.019e-02s  min 2.493e-02s  dev 5.254e-03s
+DFFT  f1dx  max 4.981e-03s  avg 4.877e-03s  min 4.774e-03s  dev 1.036e-04s
+DFFT  fd23  max 3.356e-02s  avg 2.856e-02s  min 2.357e-02s  dev 4.993e-03s
+DFFT  fd32  max 9.814e-03s  avg 9.617e-03s  min 9.421e-03s  dev 1.965e-04s
+DFFT  f1dy  max 4.845e-03s  avg 4.806e-03s  min 4.766e-03s  dev 3.927e-05s
+DFFT  fd23  max 1.250e-02s  avg 1.214e-02s  min 1.179e-02s  dev 3.540e-04s
+DFFT  fd32  max 8.572e-03s  avg 8.000e-03s  min 7.427e-03s  dev 5.721e-04s
+DFFT  f1dz  max 4.973e-03s  avg 4.919e-03s  min 4.865e-03s  dev 5.421e-05s
+DFFT fdist  max 9.988e-02s  avg 8.851e-02s  min 7.714e-02s  dev 1.137e-02s
+DFFT fdfft  max 1.461e-02s  avg 1.460e-02s  min 1.459e-02s  dev 1.008e-05s
+FORWARD     max 1.167e-01s  avg 1.166e-01s  min 1.165e-01s  dev 1.089e-04s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.891e-03s  avg 4.621e-03s  min 4.351e-03s  dev 2.700e-04s
+DFFT  bd23  max 8.998e-03s  avg 8.573e-03s  min 8.149e-03s  dev 4.241e-04s
+DFFT  bd32  max 1.077e-02s  avg 1.034e-02s  min 9.903e-03s  dev 4.336e-04s
+DFFT  b1dy  max 4.955e-03s  avg 4.856e-03s  min 4.757e-03s  dev 9.911e-05s
+DFFT  bd23  max 1.259e-02s  avg 1.222e-02s  min 1.184e-02s  dev 3.750e-04s
+DFFT  bd32  max 3.370e-02s  avg 2.860e-02s  min 2.349e-02s  dev 5.103e-03s
+DFFT  b1dx  max 4.860e-03s  avg 4.754e-03s  min 4.648e-03s  dev 1.061e-04s
+DFFT  bd23  max 3.587e-02s  avg 3.053e-02s  min 2.519e-02s  dev 5.339e-03s
+DFFT bdist  max 1.019e-01s  avg 9.025e-02s  min 7.858e-02s  dev 1.167e-02s
+DFFT bdfft  max 1.449e-02s  avg 1.423e-02s  min 1.397e-02s  dev 2.631e-04s
+BACKWARD    max 1.187e-01s  avg 1.187e-01s  min 1.186e-01s  dev 1.675e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,4,1.410542,0.243392
+
+TESTING 4
+
+[PI-INFO] Paramount Iteration,1,4,1.401924,0.243389
+DFFT  fd32  max 3.500e-02s  avg 2.967e-02s  min 2.434e-02s  dev 5.333e-03s
+DFFT  f1dx  max 4.913e-03s  avg 4.748e-03s  min 4.582e-03s  dev 1.656e-04s
+DFFT  fd23  max 3.287e-02s  avg 2.799e-02s  min 2.310e-02s  dev 4.886e-03s
+DFFT  fd32  max 9.798e-03s  avg 9.671e-03s  min 9.543e-03s  dev 1.275e-04s
+DFFT  f1dy  max 4.926e-03s  avg 4.896e-03s  min 4.865e-03s  dev 3.016e-05s
+DFFT  fd23  max 1.277e-02s  avg 1.245e-02s  min 1.213e-02s  dev 3.192e-04s
+DFFT  fd32  max 8.727e-03s  avg 8.283e-03s  min 7.839e-03s  dev 4.437e-04s
+DFFT  f1dz  max 4.984e-03s  avg 4.956e-03s  min 4.928e-03s  dev 2.791e-05s
+DFFT fdist  max 9.917e-02s  avg 8.806e-02s  min 7.695e-02s  dev 1.111e-02s
+DFFT fdfft  max 1.477e-02s  avg 1.460e-02s  min 1.443e-02s  dev 1.678e-04s
+FORWARD     max 1.160e-01s  avg 1.159e-01s  min 1.159e-01s  dev 7.861e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.845e-03s  avg 4.669e-03s  min 4.493e-03s  dev 1.757e-04s
+DFFT  bd23  max 8.715e-03s  avg 8.544e-03s  min 8.373e-03s  dev 1.712e-04s
+DFFT  bd32  max 1.051e-02s  avg 1.035e-02s  min 1.019e-02s  dev 1.620e-04s
+DFFT  b1dy  max 4.887e-03s  avg 4.885e-03s  min 4.884e-03s  dev 1.845e-06s
+DFFT  bd23  max 1.236e-02s  avg 1.236e-02s  min 1.236e-02s  dev 4.227e-06s
+DFFT  bd32  max 3.455e-02s  avg 2.928e-02s  min 2.401e-02s  dev 5.268e-03s
+DFFT  b1dx  max 5.001e-03s  avg 4.854e-03s  min 4.708e-03s  dev 1.464e-04s
+DFFT  bd23  max 3.584e-02s  avg 3.009e-02s  min 2.434e-02s  dev 5.750e-03s
+DFFT bdist  max 1.020e-01s  avg 9.062e-02s  min 7.926e-02s  dev 1.136e-02s
+DFFT bdfft  max 1.444e-02s  avg 1.441e-02s  min 1.438e-02s  dev 2.742e-05s
+BACKWARD    max 1.187e-01s  avg 1.187e-01s  min 1.187e-01s  dev 2.121e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,5,1.653346,0.242804
+
+TESTING 5
+
+[PI-INFO] Paramount Iteration,1,5,1.644731,0.242807
+DFFT  fd32  max 3.473e-02s  avg 2.953e-02s  min 2.432e-02s  dev 5.206e-03s
+DFFT  f1dx  max 5.048e-03s  avg 4.940e-03s  min 4.831e-03s  dev 1.081e-04s
+DFFT  fd23  max 3.275e-02s  avg 2.850e-02s  min 2.424e-02s  dev 4.254e-03s
+DFFT  fd32  max 1.017e-02s  avg 9.968e-03s  min 9.770e-03s  dev 1.985e-04s
+DFFT  f1dy  max 4.918e-03s  avg 4.854e-03s  min 4.789e-03s  dev 6.410e-05s
+DFFT  fd23  max 1.247e-02s  avg 1.243e-02s  min 1.238e-02s  dev 4.355e-05s
+DFFT  fd32  max 8.460e-03s  avg 8.459e-03s  min 8.458e-03s  dev 8.900e-07s
+DFFT  f1dz  max 5.042e-03s  avg 4.965e-03s  min 4.888e-03s  dev 7.683e-05s
+DFFT fdist  max 9.810e-02s  avg 8.888e-02s  min 7.966e-02s  dev 9.219e-03s
+DFFT fdfft  max 1.501e-02s  avg 1.476e-02s  min 1.451e-02s  dev 2.491e-04s
+FORWARD     max 1.157e-01s  avg 1.157e-01s  min 1.156e-01s  dev 2.786e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.748e-03s  avg 4.744e-03s  min 4.740e-03s  dev 3.652e-06s
+DFFT  bd23  max 8.618e-03s  avg 8.596e-03s  min 8.574e-03s  dev 2.211e-05s
+DFFT  bd32  max 1.027e-02s  avg 1.022e-02s  min 1.016e-02s  dev 5.382e-05s
+DFFT  b1dy  max 4.779e-03s  avg 4.758e-03s  min 4.738e-03s  dev 2.074e-05s
+DFFT  bd23  max 1.237e-02s  avg 1.230e-02s  min 1.222e-02s  dev 7.543e-05s
+DFFT  bd32  max 3.508e-02s  avg 3.018e-02s  min 2.528e-02s  dev 4.903e-03s
+DFFT  b1dx  max 4.896e-03s  avg 4.752e-03s  min 4.607e-03s  dev 1.445e-04s
+DFFT  bd23  max 3.393e-02s  avg 2.905e-02s  min 2.416e-02s  dev 4.886e-03s
+DFFT bdist  max 1.002e-01s  avg 9.033e-02s  min 8.044e-02s  dev 9.896e-03s
+DFFT bdfft  max 1.442e-02s  avg 1.425e-02s  min 1.409e-02s  dev 1.689e-04s
+BACKWARD    max 1.167e-01s  avg 1.167e-01s  min 1.167e-01s  dev 2.705e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,6,1.893825,0.240479
+
+TESTING 6
+
+[PI-INFO] Paramount Iteration,1,6,1.885208,0.240477
+DFFT  fd32  max 3.305e-02s  avg 2.808e-02s  min 2.311e-02s  dev 4.973e-03s
+DFFT  f1dx  max 4.802e-03s  avg 4.696e-03s  min 4.589e-03s  dev 1.063e-04s
+DFFT  fd23  max 3.234e-02s  avg 2.789e-02s  min 2.345e-02s  dev 4.441e-03s
+DFFT  fd32  max 9.480e-03s  avg 9.373e-03s  min 9.266e-03s  dev 1.073e-04s
+DFFT  f1dy  max 4.843e-03s  avg 4.809e-03s  min 4.774e-03s  dev 3.436e-05s
+DFFT  fd23  max 1.235e-02s  avg 1.233e-02s  min 1.231e-02s  dev 1.531e-05s
+DFFT  fd32  max 8.224e-03s  avg 8.203e-03s  min 8.182e-03s  dev 2.080e-05s
+DFFT  f1dz  max 4.906e-03s  avg 4.876e-03s  min 4.845e-03s  dev 3.061e-05s
+DFFT fdist  max 9.540e-02s  avg 8.588e-02s  min 7.636e-02s  dev 9.516e-03s
+DFFT fdfft  max 1.455e-02s  avg 1.438e-02s  min 1.421e-02s  dev 1.712e-04s
+FORWARD     max 1.120e-01s  avg 1.120e-01s  min 1.119e-01s  dev 4.448e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.665e-03s  avg 4.550e-03s  min 4.435e-03s  dev 1.150e-04s
+DFFT  bd23  max 8.673e-03s  avg 8.475e-03s  min 8.277e-03s  dev 1.979e-04s
+DFFT  bd32  max 1.019e-02s  avg 1.005e-02s  min 9.901e-03s  dev 1.452e-04s
+DFFT  b1dy  max 4.817e-03s  avg 4.795e-03s  min 4.773e-03s  dev 2.224e-05s
+DFFT  bd23  max 1.220e-02s  avg 1.214e-02s  min 1.208e-02s  dev 6.262e-05s
+DFFT  bd32  max 3.332e-02s  avg 2.846e-02s  min 2.361e-02s  dev 4.857e-03s
+DFFT  b1dx  max 4.691e-03s  avg 4.603e-03s  min 4.515e-03s  dev 8.796e-05s
+DFFT  bd23  max 3.511e-02s  avg 2.956e-02s  min 2.401e-02s  dev 5.553e-03s
+DFFT bdist  max 9.950e-02s  avg 8.868e-02s  min 7.787e-02s  dev 1.082e-02s
+DFFT bdfft  max 1.400e-02s  avg 1.395e-02s  min 1.390e-02s  dev 4.932e-05s
+BACKWARD    max 1.157e-01s  avg 1.157e-01s  min 1.157e-01s  dev 2.815e-06s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,7,2.129522,0.235697
+
+TESTING 7
+
+[PI-INFO] Paramount Iteration,1,7,2.120907,0.235699
+DFFT  fd32  max 3.328e-02s  avg 2.804e-02s  min 2.280e-02s  dev 5.243e-03s
+DFFT  f1dx  max 4.933e-03s  avg 4.882e-03s  min 4.832e-03s  dev 5.034e-05s
+DFFT  fd23  max 3.350e-02s  avg 2.887e-02s  min 2.424e-02s  dev 4.629e-03s
+DFFT  fd32  max 1.020e-02s  avg 1.014e-02s  min 1.008e-02s  dev 5.813e-05s
+DFFT  f1dy  max 4.859e-03s  avg 4.846e-03s  min 4.833e-03s  dev 1.260e-05s
+DFFT  fd23  max 1.276e-02s  avg 1.251e-02s  min 1.227e-02s  dev 2.459e-04s
+DFFT  fd32  max 8.730e-03s  avg 8.540e-03s  min 8.350e-03s  dev 1.900e-04s
+DFFT  f1dz  max 5.070e-03s  avg 5.030e-03s  min 4.989e-03s  dev 4.042e-05s
+DFFT fdist  max 9.836e-02s  avg 8.811e-02s  min 7.786e-02s  dev 1.025e-02s
+DFFT fdfft  max 1.486e-02s  avg 1.476e-02s  min 1.465e-02s  dev 1.034e-04s
+FORWARD     max 1.154e-01s  avg 1.154e-01s  min 1.153e-01s  dev 4.842e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.858e-03s  avg 4.855e-03s  min 4.851e-03s  dev 3.410e-06s
+DFFT  bd23  max 8.858e-03s  avg 8.825e-03s  min 8.792e-03s  dev 3.294e-05s
+DFFT  bd32  max 1.056e-02s  avg 1.050e-02s  min 1.044e-02s  dev 5.702e-05s
+DFFT  b1dy  max 4.939e-03s  avg 4.916e-03s  min 4.894e-03s  dev 2.276e-05s
+DFFT  bd23  max 1.246e-02s  avg 1.243e-02s  min 1.240e-02s  dev 2.786e-05s
+DFFT  bd32  max 3.655e-02s  avg 3.124e-02s  min 2.592e-02s  dev 5.317e-03s
+DFFT  b1dx  max 4.993e-03s  avg 4.872e-03s  min 4.751e-03s  dev 1.210e-04s
+DFFT  bd23  max 3.611e-02s  avg 3.093e-02s  min 2.574e-02s  dev 5.184e-03s
+DFFT bdist  max 1.045e-01s  avg 9.392e-02s  min 8.330e-02s  dev 1.062e-02s
+DFFT bdfft  max 1.479e-02s  avg 1.464e-02s  min 1.450e-02s  dev 1.472e-04s
+BACKWARD    max 1.214e-01s  avg 1.213e-01s  min 1.213e-01s  dev 3.031e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,8,2.374437,0.244915
+
+TESTING 8
+
+[PI-INFO] Paramount Iteration,1,8,2.365831,0.244924
+DFFT  fd32  max 3.555e-02s  avg 3.026e-02s  min 2.496e-02s  dev 5.295e-03s
+DFFT  f1dx  max 4.972e-03s  avg 4.820e-03s  min 4.669e-03s  dev 1.516e-04s
+DFFT  fd23  max 3.369e-02s  avg 2.877e-02s  min 2.385e-02s  dev 4.919e-03s
+DFFT  fd32  max 1.028e-02s  avg 1.018e-02s  min 1.008e-02s  dev 9.850e-05s
+DFFT  f1dy  max 4.967e-03s  avg 4.933e-03s  min 4.900e-03s  dev 3.380e-05s
+DFFT  fd23  max 1.268e-02s  avg 1.245e-02s  min 1.222e-02s  dev 2.314e-04s
+DFFT  fd32  max 8.708e-03s  avg 8.387e-03s  min 8.066e-03s  dev 3.214e-04s
+DFFT  f1dz  max 4.981e-03s  avg 4.969e-03s  min 4.957e-03s  dev 1.197e-05s
+DFFT fdist  max 1.007e-01s  avg 9.004e-02s  min 7.937e-02s  dev 1.067e-02s
+DFFT fdfft  max 1.490e-02s  avg 1.472e-02s  min 1.455e-02s  dev 1.734e-04s
+FORWARD     max 1.179e-01s  avg 1.178e-01s  min 1.176e-01s  dev 1.260e-04s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.980e-03s  avg 4.799e-03s  min 4.619e-03s  dev 1.803e-04s
+DFFT  bd23  max 8.977e-03s  avg 8.740e-03s  min 8.502e-03s  dev 2.376e-04s
+DFFT  bd32  max 1.072e-02s  avg 1.039e-02s  min 1.006e-02s  dev 3.305e-04s
+DFFT  b1dy  max 5.078e-03s  avg 4.957e-03s  min 4.835e-03s  dev 1.216e-04s
+DFFT  bd23  max 1.287e-02s  avg 1.247e-02s  min 1.206e-02s  dev 4.073e-04s
+DFFT  bd32  max 3.498e-02s  avg 2.964e-02s  min 2.430e-02s  dev 5.338e-03s
+DFFT  b1dx  max 4.988e-03s  avg 4.867e-03s  min 4.747e-03s  dev 1.202e-04s
+DFFT  bd23  max 3.619e-02s  avg 3.055e-02s  min 2.490e-02s  dev 5.642e-03s
+DFFT bdist  max 1.037e-01s  avg 9.178e-02s  min 7.983e-02s  dev 1.196e-02s
+DFFT bdfft  max 1.481e-02s  avg 1.462e-02s  min 1.444e-02s  dev 1.818e-04s
+BACKWARD    max 1.208e-01s  avg 1.207e-01s  min 1.207e-01s  dev 2.184e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,9,2.621097,0.246660
+
+TESTING 9
+
+[PI-INFO] Paramount Iteration,1,9,2.612493,0.246662
+DFFT  fd32  max 3.523e-02s  avg 2.986e-02s  min 2.448e-02s  dev 5.377e-03s
+DFFT  f1dx  max 5.009e-03s  avg 4.998e-03s  min 4.987e-03s  dev 1.107e-05s
+DFFT  fd23  max 3.419e-02s  avg 2.907e-02s  min 2.394e-02s  dev 5.124e-03s
+DFFT  fd32  max 1.029e-02s  avg 1.014e-02s  min 9.997e-03s  dev 1.453e-04s
+DFFT  f1dy  max 4.871e-03s  avg 4.844e-03s  min 4.818e-03s  dev 2.677e-05s
+DFFT  fd23  max 1.275e-02s  avg 1.249e-02s  min 1.223e-02s  dev 2.571e-04s
+DFFT  fd32  max 8.528e-03s  avg 8.467e-03s  min 8.406e-03s  dev 6.128e-05s
+DFFT  f1dz  max 5.005e-03s  avg 4.976e-03s  min 4.947e-03s  dev 2.921e-05s
+DFFT fdist  max 1.010e-01s  avg 9.002e-02s  min 7.906e-02s  dev 1.096e-02s
+DFFT fdfft  max 1.486e-02s  avg 1.482e-02s  min 1.477e-02s  dev 4.491e-05s
+FORWARD     max 1.179e-01s  avg 1.179e-01s  min 1.178e-01s  dev 6.541e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.917e-03s  avg 4.823e-03s  min 4.728e-03s  dev 9.473e-05s
+DFFT  bd23  max 8.860e-03s  avg 8.750e-03s  min 8.639e-03s  dev 1.107e-04s
+DFFT  bd32  max 1.047e-02s  avg 1.033e-02s  min 1.019e-02s  dev 1.412e-04s
+DFFT  b1dy  max 4.912e-03s  avg 4.855e-03s  min 4.797e-03s  dev 5.743e-05s
+DFFT  bd23  max 1.246e-02s  avg 1.231e-02s  min 1.216e-02s  dev 1.460e-04s
+DFFT  bd32  max 3.586e-02s  avg 3.065e-02s  min 2.545e-02s  dev 5.206e-03s
+DFFT  b1dx  max 5.077e-03s  avg 4.957e-03s  min 4.838e-03s  dev 1.194e-04s
+DFFT  bd23  max 3.659e-02s  avg 3.094e-02s  min 2.529e-02s  dev 5.650e-03s
+DFFT bdist  max 1.042e-01s  avg 9.299e-02s  min 8.173e-02s  dev 1.125e-02s
+DFFT bdfft  max 1.467e-02s  avg 1.464e-02s  min 1.460e-02s  dev 3.273e-05s
+BACKWARD    max 1.212e-01s  avg 1.212e-01s  min 1.211e-01s  dev 2.038e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,10,2.868327,0.247230
+
+TESTING a
+
+[PI-INFO] Paramount Iteration,1,10,2.859715,0.247222
+DFFT  fd32  max 3.581e-02s  avg 3.074e-02s  min 2.567e-02s  dev 5.073e-03s
+DFFT  f1dx  max 5.174e-03s  avg 4.937e-03s  min 4.700e-03s  dev 2.367e-04s
+DFFT  fd23  max 3.465e-02s  avg 2.977e-02s  min 2.489e-02s  dev 4.879e-03s
+DFFT  fd32  max 1.067e-02s  avg 1.037e-02s  min 1.008e-02s  dev 2.967e-04s
+DFFT  f1dy  max 4.917e-03s  avg 4.889e-03s  min 4.861e-03s  dev 2.767e-05s
+DFFT  fd23  max 1.252e-02s  avg 1.236e-02s  min 1.221e-02s  dev 1.540e-04s
+DFFT  fd32  max 8.389e-03s  avg 8.194e-03s  min 7.999e-03s  dev 1.952e-04s
+DFFT  f1dz  max 4.938e-03s  avg 4.903e-03s  min 4.867e-03s  dev 3.557e-05s
+DFFT fdist  max 1.014e-01s  avg 9.144e-02s  min 8.143e-02s  dev 1.000e-02s
+DFFT fdfft  max 1.503e-02s  avg 1.473e-02s  min 1.443e-02s  dev 3.000e-04s
+FORWARD     max 1.192e-01s  avg 1.191e-01s  min 1.189e-01s  dev 1.143e-04s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.847e-03s  avg 4.709e-03s  min 4.572e-03s  dev 1.374e-04s
+DFFT  bd23  max 8.787e-03s  avg 8.603e-03s  min 8.418e-03s  dev 1.848e-04s
+DFFT  bd32  max 1.046e-02s  avg 1.022e-02s  min 9.979e-03s  dev 2.427e-04s
+DFFT  b1dy  max 4.903e-03s  avg 4.838e-03s  min 4.772e-03s  dev 6.519e-05s
+DFFT  bd23  max 1.244e-02s  avg 1.224e-02s  min 1.205e-02s  dev 1.931e-04s
+DFFT  bd32  max 3.417e-02s  avg 2.908e-02s  min 2.399e-02s  dev 5.090e-03s
+DFFT  b1dx  max 4.841e-03s  avg 4.744e-03s  min 4.646e-03s  dev 9.775e-05s
+DFFT  bd23  max 3.446e-02s  avg 2.914e-02s  min 2.381e-02s  dev 5.325e-03s
+DFFT bdist  max 1.003e-01s  avg 8.928e-02s  min 7.825e-02s  dev 1.104e-02s
+DFFT bdfft  max 1.440e-02s  avg 1.429e-02s  min 1.419e-02s  dev 1.049e-04s
+BACKWARD    max 1.169e-01s  avg 1.169e-01s  min 1.169e-01s  dev 2.390e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,11,3.112485,0.244158
+
+TESTING b
+
+[PI-INFO] Paramount Iteration,1,11,3.103875,0.244160
+DFFT  fd32  max 3.244e-02s  avg 2.744e-02s  min 2.244e-02s  dev 5.001e-03s
+DFFT  f1dx  max 5.015e-03s  avg 4.897e-03s  min 4.780e-03s  dev 1.174e-04s
+DFFT  fd23  max 3.342e-02s  avg 2.863e-02s  min 2.383e-02s  dev 4.795e-03s
+DFFT  fd32  max 1.021e-02s  avg 1.012e-02s  min 1.002e-02s  dev 9.453e-05s
+DFFT  f1dy  max 4.953e-03s  avg 4.839e-03s  min 4.724e-03s  dev 1.145e-04s
+DFFT  fd23  max 1.240e-02s  avg 1.234e-02s  min 1.228e-02s  dev 6.038e-05s
+DFFT  fd32  max 8.503e-03s  avg 8.452e-03s  min 8.401e-03s  dev 5.108e-05s
+DFFT  f1dz  max 5.085e-03s  avg 4.995e-03s  min 4.906e-03s  dev 8.959e-05s
+DFFT fdist  max 9.679e-02s  avg 8.697e-02s  min 7.716e-02s  dev 9.814e-03s
+DFFT fdfft  max 1.505e-02s  avg 1.473e-02s  min 1.441e-02s  dev 3.215e-04s
+FORWARD     max 1.141e-01s  avg 1.141e-01s  min 1.141e-01s  dev 2.753e-06s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.853e-03s  avg 4.770e-03s  min 4.686e-03s  dev 8.350e-05s
+DFFT  bd23  max 8.802e-03s  avg 8.676e-03s  min 8.549e-03s  dev 1.268e-04s
+DFFT  bd32  max 1.041e-02s  avg 1.024e-02s  min 1.007e-02s  dev 1.709e-04s
+DFFT  b1dy  max 4.949e-03s  avg 4.903e-03s  min 4.857e-03s  dev 4.604e-05s
+DFFT  bd23  max 1.260e-02s  avg 1.256e-02s  min 1.251e-02s  dev 4.271e-05s
+DFFT  bd32  max 3.514e-02s  avg 3.014e-02s  min 2.513e-02s  dev 5.003e-03s
+DFFT  b1dx  max 5.025e-03s  avg 4.904e-03s  min 4.783e-03s  dev 1.209e-04s
+DFFT  bd23  max 3.495e-02s  avg 2.993e-02s  min 2.491e-02s  dev 5.020e-03s
+DFFT bdist  max 1.019e-01s  avg 9.154e-02s  min 8.118e-02s  dev 1.036e-02s
+DFFT bdfft  max 1.466e-02s  avg 1.458e-02s  min 1.449e-02s  dev 8.340e-05s
+BACKWARD    max 1.188e-01s  avg 1.187e-01s  min 1.187e-01s  dev 2.392e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,12,3.353368,0.240883
+
+TESTING c
+
+[PI-INFO] Paramount Iteration,1,12,3.344753,0.240878
+DFFT  fd32  max 3.416e-02s  avg 2.911e-02s  min 2.405e-02s  dev 5.053e-03s
+DFFT  f1dx  max 5.143e-03s  avg 4.836e-03s  min 4.530e-03s  dev 3.068e-04s
+DFFT  fd23  max 3.378e-02s  avg 2.958e-02s  min 2.537e-02s  dev 4.206e-03s
+DFFT  fd32  max 1.071e-02s  avg 1.024e-02s  min 9.765e-03s  dev 4.746e-04s
+DFFT  f1dy  max 4.976e-03s  avg 4.936e-03s  min 4.896e-03s  dev 4.034e-05s
+DFFT  fd23  max 1.259e-02s  avg 1.252e-02s  min 1.246e-02s  dev 6.481e-05s
+DFFT  fd32  max 8.717e-03s  avg 8.556e-03s  min 8.396e-03s  dev 1.607e-04s
+DFFT  f1dz  max 5.123e-03s  avg 5.007e-03s  min 4.891e-03s  dev 1.164e-04s
+DFFT fdist  max 9.857e-02s  avg 9.001e-02s  min 8.145e-02s  dev 8.559e-03s
+DFFT fdfft  max 1.524e-02s  avg 1.478e-02s  min 1.432e-02s  dev 4.635e-04s
+FORWARD     max 1.174e-01s  avg 1.174e-01s  min 1.174e-01s  dev 2.421e-05s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.895e-03s  avg 4.796e-03s  min 4.696e-03s  dev 9.956e-05s
+DFFT  bd23  max 9.002e-03s  avg 8.843e-03s  min 8.684e-03s  dev 1.589e-04s
+DFFT  bd32  max 1.061e-02s  avg 1.035e-02s  min 1.009e-02s  dev 2.625e-04s
+DFFT  b1dy  max 4.991e-03s  avg 4.913e-03s  min 4.835e-03s  dev 7.778e-05s
+DFFT  bd23  max 1.286e-02s  avg 1.248e-02s  min 1.211e-02s  dev 3.757e-04s
+DFFT  bd32  max 3.553e-02s  avg 3.059e-02s  min 2.565e-02s  dev 4.942e-03s
+DFFT  b1dx  max 5.067e-03s  avg 4.799e-03s  min 4.531e-03s  dev 2.679e-04s
+DFFT  bd23  max 3.467e-02s  avg 2.997e-02s  min 2.527e-02s  dev 4.698e-03s
+DFFT bdist  max 1.011e-01s  avg 9.224e-02s  min 8.340e-02s  dev 8.843e-03s
+DFFT bdfft  max 1.495e-02s  avg 1.451e-02s  min 1.406e-02s  dev 4.452e-04s
+BACKWARD    max 1.198e-01s  avg 1.197e-01s  min 1.197e-01s  dev 3.237e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,13,3.598790,0.245422
+
+TESTING d
+
+[PI-INFO] Paramount Iteration,1,13,3.590178,0.245425
+DFFT  fd32  max 3.557e-02s  avg 3.036e-02s  min 2.514e-02s  dev 5.211e-03s
+DFFT  f1dx  max 5.100e-03s  avg 4.876e-03s  min 4.652e-03s  dev 2.238e-04s
+DFFT  fd23  max 3.386e-02s  avg 2.919e-02s  min 2.451e-02s  dev 4.672e-03s
+DFFT  fd32  max 1.040e-02s  avg 1.022e-02s  min 1.005e-02s  dev 1.759e-04s
+DFFT  f1dy  max 4.910e-03s  avg 4.894e-03s  min 4.879e-03s  dev 1.595e-05s
+DFFT  fd23  max 1.270e-02s  avg 1.263e-02s  min 1.257e-02s  dev 6.470e-05s
+DFFT  fd32  max 8.702e-03s  avg 8.672e-03s  min 8.641e-03s  dev 3.024e-05s
+DFFT  f1dz  max 5.040e-03s  avg 5.007e-03s  min 4.973e-03s  dev 3.348e-05s
+DFFT fdist  max 1.007e-01s  avg 9.107e-02s  min 8.140e-02s  dev 9.673e-03s
+DFFT fdfft  max 1.498e-02s  avg 1.478e-02s  min 1.457e-02s  dev 2.063e-04s
+FORWARD     max 1.184e-01s  avg 1.182e-01s  min 1.181e-01s  dev 1.389e-04s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.945e-03s  avg 4.791e-03s  min 4.638e-03s  dev 1.535e-04s
+DFFT  bd23  max 8.915e-03s  avg 8.824e-03s  min 8.732e-03s  dev 9.143e-05s
+DFFT  bd32  max 1.058e-02s  avg 1.054e-02s  min 1.050e-02s  dev 4.101e-05s
+DFFT  b1dy  max 4.954e-03s  avg 4.941e-03s  min 4.927e-03s  dev 1.346e-05s
+DFFT  bd23  max 1.269e-02s  avg 1.264e-02s  min 1.260e-02s  dev 4.629e-05s
+DFFT  bd32  max 3.583e-02s  avg 3.054e-02s  min 2.524e-02s  dev 5.296e-03s
+DFFT  b1dx  max 4.933e-03s  avg 4.864e-03s  min 4.796e-03s  dev 6.821e-05s
+DFFT  bd23  max 3.612e-02s  avg 3.058e-02s  min 2.504e-02s  dev 5.544e-03s
+DFFT bdist  max 1.040e-01s  avg 9.312e-02s  min 8.220e-02s  dev 1.093e-02s
+DFFT bdfft  max 1.467e-02s  avg 1.460e-02s  min 1.452e-02s  dev 7.183e-05s
+BACKWARD    max 1.211e-01s  avg 1.210e-01s  min 1.210e-01s  dev 2.928e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,14,3.846198,0.247408
+
+TESTING e
+
+[PI-INFO] Paramount Iteration,1,14,3.837574,0.247396
+DFFT  fd32  max 3.553e-02s  avg 3.038e-02s  min 2.523e-02s  dev 5.149e-03s
+DFFT  f1dx  max 5.186e-03s  avg 4.895e-03s  min 4.603e-03s  dev 2.911e-04s
+DFFT  fd23  max 3.515e-02s  avg 3.019e-02s  min 2.524e-02s  dev 4.958e-03s
+DFFT  fd32  max 1.071e-02s  avg 1.040e-02s  min 1.009e-02s  dev 3.097e-04s
+DFFT  f1dy  max 4.925e-03s  avg 4.905e-03s  min 4.885e-03s  dev 1.979e-05s
+DFFT  fd23  max 1.267e-02s  avg 1.254e-02s  min 1.241e-02s  dev 1.282e-04s
+DFFT  fd32  max 8.843e-03s  avg 8.823e-03s  min 8.804e-03s  dev 1.935e-05s
+DFFT  f1dz  max 5.027e-03s  avg 5.018e-03s  min 5.009e-03s  dev 8.889e-06s
+DFFT fdist  max 1.023e-01s  avg 9.234e-02s  min 8.240e-02s  dev 9.945e-03s
+DFFT fdfft  max 1.514e-02s  avg 1.482e-02s  min 1.450e-02s  dev 3.198e-04s
+FORWARD     max 1.202e-01s  avg 1.201e-01s  min 1.200e-01s  dev 1.020e-04s
+
+k-space:
+real in [1.000000e+00,1.000000e+00] = [3ff0000000000000,3ff0000000000000]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+DFFT  b1dz  max 4.972e-03s  avg 4.815e-03s  min 4.658e-03s  dev 1.569e-04s
+DFFT  bd23  max 8.835e-03s  avg 8.769e-03s  min 8.702e-03s  dev 6.679e-05s
+DFFT  bd32  max 1.051e-02s  avg 1.042e-02s  min 1.034e-02s  dev 8.370e-05s
+DFFT  b1dy  max 5.028e-03s  avg 4.996e-03s  min 4.964e-03s  dev 3.197e-05s
+DFFT  bd23  max 1.282e-02s  avg 1.257e-02s  min 1.231e-02s  dev 2.595e-04s
+DFFT  bd32  max 3.405e-02s  avg 2.884e-02s  min 2.363e-02s  dev 5.210e-03s
+DFFT  b1dx  max 4.862e-03s  avg 4.736e-03s  min 4.610e-03s  dev 1.258e-04s
+DFFT  bd23  max 3.617e-02s  avg 3.091e-02s  min 2.566e-02s  dev 5.252e-03s
+DFFT bdist  max 1.022e-01s  avg 9.151e-02s  min 8.077e-02s  dev 1.074e-02s
+DFFT bdfft  max 1.461e-02s  avg 1.455e-02s  min 1.448e-02s  dev 6.313e-05s
+BACKWARD    max 1.193e-01s  avg 1.192e-01s  min 1.192e-01s  dev 3.323e-05s
+
+r-space:
+a[0,0,0] = (2097152.000000,0.000000) = (4140000000000000,0)
+real in [0.000000e+00,0.000000e+00] = [0,0]
+imag in [0.000000e+00,0.000000e+00] = [0,0]
+
+[PI-INFO] Paramount Iteration,0,15,4.093699,0.247501
+[PI-INFO] PI avg,0,0.244590,15
+[PI-INFO] Beta,0,0.000002
+[PI-INFO] Total time,4.093706
+[PI-INFO] Paramount Iteration,1,15,4.085100,0.247526
+[PI-INFO] PI avg,1,0.244587,15
+[PI-INFO] Beta,1,0.000007
+[ip-172-31-6-19:19151] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-6-19:19151] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-6-19 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./build/TestDfft 1000 128"
+	User time (seconds): 3.40
+	System time (seconds): 0.64
+	Percent of CPU this job got: 60%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81208
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 21362
+	Voluntary context switches: 1244
+	Involuntary context switches: 13
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

@@ -27,9 +27,9 @@ for ((i=0; i<len; i++)); do
   clapp cluster action ${cluster_id} ${bench_name}-group run --extra "num_n=${num_vm}"
 done
 
-clapp cluster action ${cluster_id} ${bench_name}-group fetch-results --extra "dir=${dest}/execution-scripts"
-
-mkdir ${results_dir}
-mv ${results} ${results_dir}
-
-clapp cluster stop ${cluster_id}
+#clapp cluster action ${cluster_id} ${bench_name}-group fetch-results --extra "dir=${dest}/execution-scripts"
+#
+#mkdir ${results_dir}
+#mv ${results} ${results_dir}
+#
+#clapp cluster stop ${cluster_id}
