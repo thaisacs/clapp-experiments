@@ -1,0 +1,117 @@
+--------------------------------------------------------------------------
+[[40572,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-8-208
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 19
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Nuclide Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     11,303
+Particle Histories:           500,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+MPI Ranks:                    1
+OMP Threads per MPI Rank:     1
+Mem Usage per MPI Rank (MB):  184
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing material data...
+Intialization complete. Allocated 184 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+[PI-INFO] Init time,0,0.759272
+[PI-INFO] Paramount Iteration,0,1,0.760361,0.001090
+[PI-INFO] Paramount Iteration,0,2,0.761155,0.000794
+[PI-INFO] Paramount Iteration,0,3,0.761748,0.000593
+[PI-INFO] Paramount Iteration,0,4,0.762403,0.000655
+[PI-INFO] Paramount Iteration,0,5,0.762810,0.000407
+[PI-INFO] Paramount Iteration,0,6,0.763480,0.000670
+[PI-INFO] Paramount Iteration,0,7,0.764074,0.000594
+[PI-INFO] Paramount Iteration,0,8,0.764632,0.000558
+[PI-INFO] Paramount Iteration,0,9,0.765203,0.000571
+[PI-INFO] Paramount Iteration,0,10,0.765959,0.000756
+[PI-INFO] Paramount Iteration,0,11,0.766662,0.000703
+[PI-INFO] Paramount Iteration,0,12,0.767192,0.000530
+[PI-INFO] Paramount Iteration,0,13,0.767642,0.000450
+[PI-INFO] Paramount Iteration,0,14,0.768335,0.000693
+[PI-INFO] Paramount Iteration,0,15,0.768777,0.000442
+[PI-INFO] PI avg,0,0.000634,15
+[PI-INFO] Beta,0,0.001254
+[PI-INFO] Total time,0.768789
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-8-208 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 1 ./XSBench -G nuclide -s large"
+	User time (seconds): 0.58
+	System time (seconds): 0.13
+	Percent of CPU this job got: 25%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 200436
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 51601
+	Voluntary context switches: 773
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
