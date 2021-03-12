@@ -1,0 +1,154 @@
+Warning: Permanently added '172.31.14.232' (ECDSA) to the list of known hosts.
+--------------------------------------------------------------------------
+[[57381,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-12-142
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+       __                __                 
+      / /   ____  ____  / /_  ____  _____   
+     / /   / __ `/ __ `/ __ \/ __ \/ ___/ 
+    / /___/ /_/ / /_/ / / / / /_/ (__  )    
+   /_____/\__,_/\__, /_/ /_/\____/____/  
+               /____/                       
+
+Options used:
+   --dimension 3
+   --mesh data/rectangle01_quad.mesh
+   --refine-serial 2
+   --refine-parallel 0
+   --cartesian-partitioning ''
+   --problem 3
+   --order-kinematic 2
+   --order-thermo 1
+   --order-intrule -1
+   --ode-solver 4
+   --t-final 5
+   --cfl 0.5
+   --cg-tol 1e-08
+   --ftz-tol 0
+   --cg-max-steps 300
+   --max-steps -1
+   --partial-assembly
+   --no-impose-viscosity
+   --no-visualization
+   --visualization-steps 5
+   --no-visit
+   --no-print
+   --outputfilename results/Laghos
+   --partition 0
+   --device cpu
+   --no-checks
+   --no-mem
+   --no-fom
+   --no-gpu-aware-mpi
+   --dev 0
+Device configuration: cpu
+Memory configuration: host-std
+Number of zones in the serial mesh: 336
+Non-Cartesian partitioning through METIS will be used.
+Zones min/max: 168 168
+Number of kinematic (position, velocity) dofs: 2850
+Number of specific internal energy dofs: 1344
+[PI-INFO] Init time,0,0.019525
+[PI-INFO] Init time,1,0.019587
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,1,0.048581,0.029056
+[PI-INFO] Paramount Iteration,1,1,0.048611,0.029024
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,2,0.077191,0.028610
+[PI-INFO] Paramount Iteration,1,2,0.077232,0.028621
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,3,0.107682,0.030491
+[PI-INFO] Paramount Iteration,1,3,0.107685,0.030453
+Repeating step 1
+[PI-INFO] Paramount Iteration,0,4,0.139868,0.032186
+[PI-INFO] Paramount Iteration,1,4,0.139935,0.032250
+[PI-INFO] Paramount Iteration,0,5,0.171489,0.031621
+[PI-INFO] Paramount Iteration,1,5,0.171548,0.031613
+Repeating step 2
+[PI-INFO] Paramount Iteration,0,6,0.202215,0.030726
+[PI-INFO] Paramount Iteration,1,6,0.202240,0.030692
+[PI-INFO] Paramount Iteration,0,7,0.234327,0.032112
+[PI-INFO] Paramount Iteration,1,7,0.234394,0.032154
+Repeating step 3
+[PI-INFO] Paramount Iteration,0,8,0.264732,0.030405
+[PI-INFO] Paramount Iteration,1,8,0.264767,0.030373
+[PI-INFO] Paramount Iteration,0,9,0.294796,0.030064
+[PI-INFO] Paramount Iteration,1,9,0.294853,0.030086
+[PI-INFO] Paramount Iteration,0,10,0.325995,0.031199
+[PI-INFO] Paramount Iteration,1,10,0.326060,0.031207
+step     5,	t = 0.0476,	dt = 0.008554,	|e| = 4.7764852179e+01
+[PI-INFO] Paramount Iteration,0,11,0.356597,0.030602
+[PI-INFO] Paramount Iteration,1,11,0.356660,0.030600
+Repeating step 6
+[PI-INFO] Paramount Iteration,0,12,0.388634,0.032037
+[PI-INFO] Paramount Iteration,1,12,0.388699,0.032039
+[PI-INFO] Paramount Iteration,0,13,0.420421,0.031787
+[PI-INFO] Paramount Iteration,1,13,0.420467,0.031768
+[PI-INFO] Paramount Iteration,0,14,0.452006,0.031585
+[PI-INFO] Paramount Iteration,1,14,0.452069,0.031602
+[PI-INFO] Paramount Iteration,0,15,0.483457,0.031451
+[PI-INFO] PI avg,0,0.030929,15
+[PI-INFO] Beta,0,0.000030
+[PI-INFO] Total time,0.483470
+[PI-INFO] Paramount Iteration,1,15,0.483525,0.031456
+[PI-INFO] PI avg,1,0.030929,15
+[PI-INFO] Beta,1,0.000032
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-12-142 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-12-142:15940] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-12-142:15940] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./laghos -p 3 -m data/rectangle01_quad.mesh -rs 2 -tf 5.0 -pa"
+	User time (seconds): 0.44
+	System time (seconds): 0.09
+	Percent of CPU this job got: 16%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 11
+	Minor (reclaiming a frame) page faults: 5238
+	Voluntary context switches: 867
+	Involuntary context switches: 45
+	Swaps: 0
+	File system inputs: 1440
+	File system outputs: 16416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
