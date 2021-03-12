@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------
+[[45723,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-0-192
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+[PI-INFO] Init time,0,0.139907
+[PI-INFO] Init time,1,0.132522
+[PI-INFO] Paramount Iteration,0,1,0.239842,0.099935
+[PI-INFO] Paramount Iteration,1,1,0.232194,0.099672
+[PI-INFO] Paramount Iteration,0,2,0.340902,0.101060
+[PI-INFO] Paramount Iteration,1,2,0.333252,0.101058
+[PI-INFO] Paramount Iteration,0,3,0.438895,0.097993
+[PI-INFO] Paramount Iteration,1,3,0.431186,0.097934
+[PI-INFO] Paramount Iteration,0,4,0.536572,0.097677
+[PI-INFO] Paramount Iteration,1,4,0.528926,0.097740
+[PI-INFO] Paramount Iteration,0,5,0.635989,0.099417
+[PI-INFO] Paramount Iteration,1,5,0.628338,0.099412
+[PI-INFO] Paramount Iteration,0,6,0.733845,0.097856
+[PI-INFO] Paramount Iteration,1,6,0.726198,0.097860
+[PI-INFO] Paramount Iteration,0,7,0.832075,0.098230
+[PI-INFO] Paramount Iteration,1,7,0.824452,0.098254
+[PI-INFO] Paramount Iteration,0,8,0.929930,0.097855
+[PI-INFO] Paramount Iteration,1,8,0.922291,0.097839
+[PI-INFO] Paramount Iteration,0,9,1.027664,0.097734
+[PI-INFO] Paramount Iteration,1,9,1.020014,0.097723
+[PI-INFO] Paramount Iteration,0,10,1.125235,0.097571
+[PI-INFO] Paramount Iteration,1,10,1.117597,0.097583
+[PI-INFO] Paramount Iteration,0,11,1.222405,0.097170
+[PI-INFO] Paramount Iteration,1,11,1.214767,0.097170
+[PI-INFO] Paramount Iteration,0,12,1.320525,0.098120
+[PI-INFO] Paramount Iteration,1,12,1.312883,0.098116
+[PI-INFO] Paramount Iteration,0,13,1.418580,0.098055
+[PI-INFO] Paramount Iteration,1,13,1.410943,0.098060
+[PI-INFO] Paramount Iteration,0,14,1.515602,0.097022
+[PI-INFO] Paramount Iteration,1,14,1.507963,0.097020
+[PI-INFO] Paramount Iteration,0,15,1.612826,0.097224
+[PI-INFO] PI avg,0,0.098195,15
+[PI-INFO] Beta,0,0.000009
+[PI-INFO] Total time,1.612839
+[PI-INFO] Paramount Iteration,1,15,1.605179,0.097216
+[PI-INFO] PI avg,1,0.098177,15
+[PI-INFO] Beta,1,0.000007
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-0-192 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-0-192:17908] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-0-192:17908] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./macsio/macsio --num_dumps 3000"
+	User time (seconds): 1.39
+	System time (seconds): 0.07
+	Percent of CPU this job got: 35%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20808
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 7619
+	Voluntary context switches: 901
+	Involuntary context switches: 10
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 157592
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
