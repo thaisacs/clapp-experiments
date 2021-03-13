@@ -1,0 +1,673 @@
+--------------------------------------------------------------------------
+[[45450,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-9-179
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 40 0 40 0 40 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 256000 8000
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232820 0.000000 0.000000e+00
+[PI-INFO] Init time,0,0.310200
+[PI-INFO] Init time,6,0.320743
+[PI-INFO] Init time,2,0.320717
+[PI-INFO] Init time,11,0.321185
+[PI-INFO] Init time,8,0.321375
+[PI-INFO] Init time,9,0.321292
+[PI-INFO] Init time,14,0.320646
+[PI-INFO] Init time,17,0.320431
+[PI-INFO] Init time,15,0.320639
+[PI-INFO] Init time,13,0.320223
+[PI-INFO] Init time,7,0.320609
+[PI-INFO] Init time,10,0.319764
+[PI-INFO] Init time,5,0.319826
+[PI-INFO] Init time,12,0.321085
+[PI-INFO] Init time,16,0.320168
+[PI-INFO] Init time,23,0.320666
+[PI-INFO] Init time,18,0.320359
+[PI-INFO] Init time,22,0.319766
+[PI-INFO] Init time,26,0.320176
+[PI-INFO] Init time,24,0.320906
+[PI-INFO] Init time,3,0.320186
+[PI-INFO] Init time,29,0.319966
+[PI-INFO] Init time,25,0.320154
+[PI-INFO] Init time,27,0.320565
+[PI-INFO] Init time,30,0.320054
+[PI-INFO] Init time,19,0.320198
+[PI-INFO] Init time,28,0.319578
+[PI-INFO] Init time,20,0.319835
+[PI-INFO] Init time,31,0.320985
+[PI-INFO] Init time,1,0.321282
+[PI-INFO] Init time,4,0.320105
+[PI-INFO] Init time,21,0.320192
+[PI-INFO] Paramount Iteration,11,1,0.326913,0.005728
+[PI-INFO] Paramount Iteration,1,1,0.327060,0.005778
+[PI-INFO] Paramount Iteration,14,1,0.326396,0.005751
+[PI-INFO] Paramount Iteration,15,1,0.326374,0.005736
+[PI-INFO] Paramount Iteration,26,1,0.325987,0.005811
+[PI-INFO] Paramount Iteration,27,1,0.326353,0.005788
+[PI-INFO] Paramount Iteration,6,1,0.326608,0.005866
+[PI-INFO] Paramount Iteration,2,1,0.326601,0.005884
+[PI-INFO] Paramount Iteration,8,1,0.327216,0.005841
+[PI-INFO] Paramount Iteration,9,1,0.327141,0.005849
+[PI-INFO] Paramount Iteration,17,1,0.326330,0.005899
+[PI-INFO] Paramount Iteration,7,1,0.326487,0.005878
+[PI-INFO] Paramount Iteration,23,1,0.326559,0.005893
+[PI-INFO] Paramount Iteration,18,1,0.326274,0.005915
+[PI-INFO] Paramount Iteration,24,1,0.326768,0.005862
+[PI-INFO] Paramount Iteration,3,1,0.326086,0.005901
+[PI-INFO] Paramount Iteration,30,1,0.325886,0.005833
+[PI-INFO] Paramount Iteration,31,1,0.326809,0.005825
+[PI-INFO] Paramount Iteration,13,1,0.326353,0.006130
+[PI-INFO] Paramount Iteration,10,1,0.325759,0.005996
+[PI-INFO] Paramount Iteration,5,1,0.325899,0.006073
+[PI-INFO] Paramount Iteration,12,1,0.327140,0.006055
+[PI-INFO] Paramount Iteration,16,1,0.326255,0.006087
+[PI-INFO] Paramount Iteration,22,1,0.325819,0.006053
+[PI-INFO] Paramount Iteration,29,1,0.326047,0.006081
+[PI-INFO] Paramount Iteration,25,1,0.326299,0.006146
+[PI-INFO] Paramount Iteration,28,1,0.325668,0.006090
+[PI-INFO] Paramount Iteration,0,1,0.316510,0.006311
+[PI-INFO] Paramount Iteration,4,1,0.326218,0.006113
+[PI-INFO] Paramount Iteration,19,1,0.326390,0.006192
+[PI-INFO] Paramount Iteration,20,1,0.326059,0.006224
+[PI-INFO] Paramount Iteration,21,1,0.326504,0.006312
+[PI-INFO] Paramount Iteration,2,2,0.332498,0.005897
+[PI-INFO] Paramount Iteration,8,2,0.333195,0.005979
+[PI-INFO] Paramount Iteration,15,2,0.332416,0.006042
+[PI-INFO] Paramount Iteration,14,2,0.332479,0.006083
+[PI-INFO] Paramount Iteration,6,2,0.332667,0.006059
+[PI-INFO] Paramount Iteration,7,2,0.332551,0.006064
+[PI-INFO] Paramount Iteration,1,2,0.333283,0.006223
+[PI-INFO] Paramount Iteration,11,2,0.333229,0.006316
+[PI-INFO] Paramount Iteration,9,2,0.333348,0.006207
+[PI-INFO] Paramount Iteration,26,2,0.332177,0.006190
+[PI-INFO] Paramount Iteration,24,2,0.332850,0.006082
+[PI-INFO] Paramount Iteration,30,2,0.332054,0.006168
+[PI-INFO] Paramount Iteration,31,2,0.333041,0.006232
+[PI-INFO] Paramount Iteration,4,2,0.332105,0.005887
+[PI-INFO] Paramount Iteration,17,2,0.332453,0.006123
+[PI-INFO] Paramount Iteration,10,2,0.331855,0.006096
+[PI-INFO] Paramount Iteration,5,2,0.331899,0.006000
+[PI-INFO] Paramount Iteration,12,2,0.333249,0.006109
+[PI-INFO] Paramount Iteration,16,2,0.332260,0.006005
+[PI-INFO] Paramount Iteration,3,2,0.332288,0.006202
+[PI-INFO] Paramount Iteration,25,2,0.332248,0.005949
+[PI-INFO] Paramount Iteration,27,2,0.332671,0.006318
+[PI-INFO] Paramount Iteration,0,2,0.322439,0.005929
+[PI-INFO] Paramount Iteration,13,2,0.332476,0.006123
+[PI-INFO] Paramount Iteration,23,2,0.332848,0.006289
+[PI-INFO] Paramount Iteration,18,2,0.332563,0.006289
+[PI-INFO] Paramount Iteration,22,2,0.332051,0.006232
+[PI-INFO] Paramount Iteration,29,2,0.332335,0.006288
+[PI-INFO] Paramount Iteration,19,2,0.332637,0.006247
+[PI-INFO] Paramount Iteration,28,2,0.331909,0.006241
+[PI-INFO] Paramount Iteration,20,2,0.332341,0.006282
+[PI-INFO] Paramount Iteration,21,2,0.332756,0.006252
+[PI-INFO] Paramount Iteration,1,3,0.339099,0.005816
+[PI-INFO] Paramount Iteration,2,3,0.338570,0.006072
+[PI-INFO] Paramount Iteration,8,3,0.339299,0.006104
+[PI-INFO] Paramount Iteration,7,3,0.338527,0.005976
+[PI-INFO] Paramount Iteration,6,3,0.338698,0.006031
+[PI-INFO] Paramount Iteration,14,3,0.338686,0.006207
+[PI-INFO] Paramount Iteration,0,3,0.328282,0.005843
+[PI-INFO] Paramount Iteration,9,3,0.339342,0.005994
+[PI-INFO] Paramount Iteration,15,3,0.338720,0.006304
+[PI-INFO] Paramount Iteration,3,3,0.338241,0.005953
+[PI-INFO] Paramount Iteration,24,3,0.338983,0.006133
+[PI-INFO] Paramount Iteration,11,3,0.339408,0.006179
+[PI-INFO] Paramount Iteration,5,3,0.337957,0.006058
+[PI-INFO] Paramount Iteration,25,3,0.338328,0.006080
+[PI-INFO] Paramount Iteration,4,3,0.338324,0.006219
+[PI-INFO] Paramount Iteration,26,3,0.338377,0.006200
+[PI-INFO] Paramount Iteration,30,3,0.338267,0.006213
+[PI-INFO] Paramount Iteration,31,3,0.339267,0.006226
+[PI-INFO] Paramount Iteration,17,3,0.338695,0.006242
+[PI-INFO] Paramount Iteration,10,3,0.338050,0.006195
+[PI-INFO] Paramount Iteration,12,3,0.339455,0.006206
+[PI-INFO] Paramount Iteration,23,3,0.339041,0.006193
+[PI-INFO] Paramount Iteration,27,3,0.338875,0.006204
+[PI-INFO] Paramount Iteration,13,3,0.338700,0.006224
+[PI-INFO] Paramount Iteration,16,3,0.338612,0.006352
+[PI-INFO] Paramount Iteration,18,3,0.338761,0.006198
+[PI-INFO] Paramount Iteration,22,3,0.338279,0.006228
+[PI-INFO] Paramount Iteration,28,3,0.338111,0.006202
+[PI-INFO] Paramount Iteration,29,3,0.338597,0.006262
+[PI-INFO] Paramount Iteration,19,3,0.338846,0.006209
+[PI-INFO] Paramount Iteration,20,3,0.338559,0.006218
+[PI-INFO] Paramount Iteration,21,3,0.339000,0.006244
+[PI-INFO] Paramount Iteration,1,4,0.345140,0.006041
+[PI-INFO] Paramount Iteration,0,4,0.334220,0.005938
+[PI-INFO] Paramount Iteration,2,4,0.344857,0.006287
+[PI-INFO] Paramount Iteration,9,4,0.345448,0.006106
+[PI-INFO] Paramount Iteration,6,4,0.344928,0.006230
+[PI-INFO] Paramount Iteration,8,4,0.345550,0.006251
+[PI-INFO] Paramount Iteration,24,4,0.345110,0.006127
+[PI-INFO] Paramount Iteration,11,4,0.345488,0.006080
+[PI-INFO] Paramount Iteration,15,4,0.344954,0.006234
+[PI-INFO] Paramount Iteration,7,4,0.344820,0.006293
+[PI-INFO] Paramount Iteration,3,4,0.344429,0.006188
+[PI-INFO] Paramount Iteration,25,4,0.344565,0.006237
+[PI-INFO] Paramount Iteration,14,4,0.345111,0.006425
+[PI-INFO] Paramount Iteration,5,4,0.344229,0.006272
+[PI-INFO] Paramount Iteration,26,4,0.344629,0.006252
+[PI-INFO] Paramount Iteration,4,4,0.344505,0.006181
+[PI-INFO] Paramount Iteration,17,4,0.344868,0.006173
+[PI-INFO] Paramount Iteration,27,4,0.345043,0.006168
+[PI-INFO] Paramount Iteration,30,4,0.344578,0.006311
+[PI-INFO] Paramount Iteration,31,4,0.345472,0.006205
+[PI-INFO] Paramount Iteration,13,4,0.344813,0.006113
+[PI-INFO] Paramount Iteration,10,4,0.344374,0.006324
+[PI-INFO] Paramount Iteration,16,4,0.344766,0.006154
+[PI-INFO] Paramount Iteration,23,4,0.345284,0.006243
+[PI-INFO] Paramount Iteration,18,4,0.344957,0.006196
+[PI-INFO] Paramount Iteration,12,4,0.345772,0.006317
+[PI-INFO] Paramount Iteration,29,4,0.344813,0.006216
+[PI-INFO] Paramount Iteration,22,4,0.344595,0.006316
+[PI-INFO] Paramount Iteration,19,4,0.345050,0.006204
+[PI-INFO] Paramount Iteration,28,4,0.344422,0.006311
+[PI-INFO] Paramount Iteration,21,4,0.345167,0.006167
+[PI-INFO] Paramount Iteration,20,4,0.344854,0.006295
+[PI-INFO] Paramount Iteration,1,5,0.351333,0.006193
+[PI-INFO] Paramount Iteration,0,5,0.340424,0.006204
+[PI-INFO] Paramount Iteration,2,5,0.350976,0.006119
+[PI-INFO] Paramount Iteration,8,5,0.351651,0.006101
+[PI-INFO] Paramount Iteration,6,5,0.351115,0.006187
+[PI-INFO] Paramount Iteration,15,5,0.351045,0.006091
+[PI-INFO] Paramount Iteration,7,5,0.350990,0.006170
+[PI-INFO] Paramount Iteration,9,5,0.351746,0.006298
+[PI-INFO] Paramount Iteration,14,5,0.351127,0.006016
+[PI-INFO] Paramount Iteration,24,5,0.351343,0.006233
+[PI-INFO] Paramount Iteration,11,5,0.351767,0.006279
+[PI-INFO] Paramount Iteration,3,5,0.350685,0.006256
+[PI-INFO] Paramount Iteration,25,5,0.350683,0.006118
+[PI-INFO] Paramount Iteration,31,5,0.351558,0.006086
+[PI-INFO] Paramount Iteration,27,5,0.351239,0.006196
+[PI-INFO] Paramount Iteration,4,5,0.350761,0.006256
+[PI-INFO] Paramount Iteration,17,5,0.351065,0.006197
+[PI-INFO] Paramount Iteration,10,5,0.350470,0.006096
+[PI-INFO] Paramount Iteration,5,5,0.350452,0.006223
+[PI-INFO] Paramount Iteration,23,5,0.351353,0.006069
+[PI-INFO] Paramount Iteration,26,5,0.350862,0.006233
+[PI-INFO] Paramount Iteration,30,5,0.350705,0.006127
+[PI-INFO] Paramount Iteration,13,5,0.351048,0.006235
+[PI-INFO] Paramount Iteration,12,5,0.351909,0.006137
+[PI-INFO] Paramount Iteration,16,5,0.350880,0.006114
+[PI-INFO] Paramount Iteration,18,5,0.351230,0.006273
+[PI-INFO] Paramount Iteration,29,5,0.350895,0.006082
+[PI-INFO] Paramount Iteration,22,5,0.350761,0.006166
+[PI-INFO] Paramount Iteration,28,5,0.350573,0.006151
+[PI-INFO] Paramount Iteration,19,5,0.351245,0.006195
+[PI-INFO] Paramount Iteration,21,5,0.351315,0.006148
+[PI-INFO] Paramount Iteration,20,5,0.350986,0.006132
+[PI-INFO] Paramount Iteration,1,6,0.357406,0.006073
+[PI-INFO] Paramount Iteration,0,6,0.346541,0.006117
+[PI-INFO] Paramount Iteration,2,6,0.357198,0.006222
+[PI-INFO] Paramount Iteration,8,6,0.357890,0.006239
+[PI-INFO] Paramount Iteration,7,6,0.357121,0.006131
+[PI-INFO] Paramount Iteration,6,6,0.357301,0.006186
+[PI-INFO] Paramount Iteration,11,6,0.357831,0.006064
+[PI-INFO] Paramount Iteration,9,6,0.357912,0.006166
+[PI-INFO] Paramount Iteration,24,6,0.357459,0.006116
+[PI-INFO] Paramount Iteration,14,6,0.357302,0.006175
+[PI-INFO] Paramount Iteration,15,6,0.357300,0.006255
+[PI-INFO] Paramount Iteration,3,6,0.356775,0.006090
+[PI-INFO] Paramount Iteration,25,6,0.356813,0.006130
+[PI-INFO] Paramount Iteration,17,6,0.357149,0.006084
+[PI-INFO] Paramount Iteration,5,6,0.356585,0.006133
+[PI-INFO] Paramount Iteration,26,6,0.356910,0.006048
+[PI-INFO] Paramount Iteration,27,6,0.357308,0.006069
+[PI-INFO] Paramount Iteration,30,6,0.356821,0.006116
+[PI-INFO] Paramount Iteration,31,6,0.357735,0.006177
+[PI-INFO] Paramount Iteration,4,6,0.356894,0.006133
+[PI-INFO] Paramount Iteration,13,6,0.357199,0.006151
+[PI-INFO] Paramount Iteration,10,6,0.356639,0.006169
+[PI-INFO] Paramount Iteration,12,6,0.357981,0.006072
+[PI-INFO] Paramount Iteration,23,6,0.357571,0.006218
+[PI-INFO] Paramount Iteration,18,6,0.357257,0.006027
+[PI-INFO] Paramount Iteration,16,6,0.357122,0.006242
+[PI-INFO] Paramount Iteration,22,6,0.356798,0.006037
+[PI-INFO] Paramount Iteration,29,6,0.357091,0.006196
+[PI-INFO] Paramount Iteration,19,6,0.357357,0.006112
+[PI-INFO] Paramount Iteration,28,6,0.356660,0.006087
+[PI-INFO] Paramount Iteration,20,6,0.357076,0.006090
+[PI-INFO] Paramount Iteration,21,6,0.357471,0.006156
+[PI-INFO] Paramount Iteration,1,7,0.363624,0.006218
+[PI-INFO] Paramount Iteration,0,7,0.352688,0.006147
+[PI-INFO] Paramount Iteration,2,7,0.363277,0.006079
+[PI-INFO] Paramount Iteration,8,7,0.364046,0.006156
+[PI-INFO] Paramount Iteration,6,7,0.363395,0.006094
+[PI-INFO] Paramount Iteration,7,7,0.363283,0.006162
+[PI-INFO] Paramount Iteration,9,7,0.364029,0.006117
+[PI-INFO] Paramount Iteration,14,7,0.363392,0.006090
+[PI-INFO] Paramount Iteration,15,7,0.363370,0.006070
+[PI-INFO] Paramount Iteration,24,7,0.363627,0.006168
+[PI-INFO] Paramount Iteration,3,7,0.362969,0.006194
+[PI-INFO] Paramount Iteration,25,7,0.362958,0.006145
+[PI-INFO] Paramount Iteration,30,7,0.362886,0.006065
+[PI-INFO] Paramount Iteration,4,7,0.363001,0.006107
+[PI-INFO] Paramount Iteration,11,7,0.364069,0.006238
+[PI-INFO] Paramount Iteration,17,7,0.363294,0.006145
+[PI-INFO] Paramount Iteration,5,7,0.362700,0.006115
+[PI-INFO] Paramount Iteration,26,7,0.363081,0.006171
+[PI-INFO] Paramount Iteration,27,7,0.363507,0.006199
+[PI-INFO] Paramount Iteration,31,7,0.363852,0.006117
+[PI-INFO] Paramount Iteration,10,7,0.362748,0.006109
+[PI-INFO] Paramount Iteration,12,7,0.364128,0.006147
+[PI-INFO] Paramount Iteration,16,7,0.363219,0.006097
+[PI-INFO] Paramount Iteration,23,7,0.363758,0.006187
+[PI-INFO] Paramount Iteration,18,7,0.363425,0.006168
+[PI-INFO] Paramount Iteration,13,7,0.363366,0.006167
+[PI-INFO] Paramount Iteration,22,7,0.362967,0.006169
+[PI-INFO] Paramount Iteration,28,7,0.362819,0.006159
+[PI-INFO] Paramount Iteration,29,7,0.363268,0.006177
+[PI-INFO] Paramount Iteration,19,7,0.363506,0.006149
+[PI-INFO] Paramount Iteration,20,7,0.363212,0.006136
+[PI-INFO] Paramount Iteration,21,7,0.363676,0.006205
+[PI-INFO] Paramount Iteration,1,8,0.369718,0.006094
+[PI-INFO] Paramount Iteration,0,8,0.358868,0.006180
+[PI-INFO] Paramount Iteration,2,8,0.369392,0.006115
+[PI-INFO] Paramount Iteration,8,8,0.370133,0.006087
+[PI-INFO] Paramount Iteration,6,8,0.369567,0.006172
+[PI-INFO] Paramount Iteration,7,8,0.369459,0.006176
+[PI-INFO] Paramount Iteration,15,8,0.369554,0.006184
+[PI-INFO] Paramount Iteration,9,8,0.370219,0.006190
+[PI-INFO] Paramount Iteration,24,8,0.369831,0.006204
+[PI-INFO] Paramount Iteration,14,8,0.369652,0.006260
+[PI-INFO] Paramount Iteration,3,8,0.369142,0.006173
+[PI-INFO] Paramount Iteration,25,8,0.369150,0.006192
+[PI-INFO] Paramount Iteration,11,8,0.370324,0.006255
+[PI-INFO] Paramount Iteration,31,8,0.370092,0.006240
+[PI-INFO] Paramount Iteration,4,8,0.369184,0.006183
+[PI-INFO] Paramount Iteration,17,8,0.369545,0.006251
+[PI-INFO] Paramount Iteration,5,8,0.368890,0.006190
+[PI-INFO] Paramount Iteration,10,8,0.369031,0.006283
+[PI-INFO] Paramount Iteration,16,8,0.369377,0.006158
+[PI-INFO] Paramount Iteration,23,8,0.369873,0.006115
+[PI-INFO] Paramount Iteration,26,8,0.369362,0.006281
+[PI-INFO] Paramount Iteration,27,8,0.369741,0.006234
+[PI-INFO] Paramount Iteration,30,8,0.369280,0.006394
+[PI-INFO] Paramount Iteration,13,8,0.369553,0.006187
+[PI-INFO] Paramount Iteration,12,8,0.370411,0.006283
+[PI-INFO] Paramount Iteration,18,8,0.369720,0.006295
+[PI-INFO] Paramount Iteration,29,8,0.369415,0.006147
+[PI-INFO] Paramount Iteration,22,8,0.369285,0.006318
+[PI-INFO] Paramount Iteration,19,8,0.369731,0.006225
+[PI-INFO] Paramount Iteration,28,8,0.369064,0.006245
+[PI-INFO] Paramount Iteration,21,8,0.369830,0.006154
+[PI-INFO] Paramount Iteration,20,8,0.369544,0.006332
+[PI-INFO] Paramount Iteration,1,9,0.375981,0.006263
+[PI-INFO] Paramount Iteration,0,9,0.365191,0.006323
+[PI-INFO] Paramount Iteration,2,9,0.375744,0.006352
+[PI-INFO] Paramount Iteration,6,9,0.375827,0.006260
+[PI-INFO] Paramount Iteration,9,9,0.376461,0.006242
+[PI-INFO] Paramount Iteration,7,9,0.375723,0.006264
+[PI-INFO] Paramount Iteration,24,9,0.376010,0.006179
+[PI-INFO] Paramount Iteration,14,9,0.375898,0.006246
+[PI-INFO] Paramount Iteration,17,9,0.375624,0.006079
+[PI-INFO] Paramount Iteration,15,9,0.375884,0.006330
+[PI-INFO] Paramount Iteration,3,9,0.375423,0.006281
+[PI-INFO] Paramount Iteration,11,9,0.376489,0.006165
+[PI-INFO] Paramount Iteration,26,9,0.375508,0.006146
+[PI-INFO] Paramount Iteration,25,9,0.375410,0.006260
+[PI-INFO] Paramount Iteration,27,9,0.375925,0.006184
+[PI-INFO] Paramount Iteration,31,9,0.376364,0.006272
+[PI-INFO] Paramount Iteration,4,9,0.375482,0.006298
+[PI-INFO] Paramount Iteration,8,9,0.376785,0.006652
+[PI-INFO] Paramount Iteration,10,9,0.375203,0.006172
+[PI-INFO] Paramount Iteration,5,9,0.375178,0.006288
+[PI-INFO] Paramount Iteration,30,9,0.375431,0.006151
+[PI-INFO] Paramount Iteration,13,9,0.375849,0.006296
+[PI-INFO] Paramount Iteration,12,9,0.376670,0.006259
+[PI-INFO] Paramount Iteration,16,9,0.375669,0.006292
+[PI-INFO] Paramount Iteration,23,9,0.376208,0.006335
+[PI-INFO] Paramount Iteration,18,9,0.375879,0.006159
+[PI-INFO] Paramount Iteration,22,9,0.375412,0.006127
+[PI-INFO] Paramount Iteration,29,9,0.375680,0.006265
+[PI-INFO] Paramount Iteration,19,9,0.376027,0.006296
+[PI-INFO] Paramount Iteration,28,9,0.375307,0.006243
+[PI-INFO] Paramount Iteration,20,9,0.375752,0.006208
+[PI-INFO] Paramount Iteration,21,9,0.376110,0.006280
+10 1.266844 -6.133420 -4.233161 0.068604 3.731567e+07
+[PI-INFO] Paramount Iteration,0,10,0.378824,0.013633
+[PI-INFO] Paramount Iteration,2,10,0.389353,0.013609
+[PI-INFO] Paramount Iteration,11,10,0.389840,0.013351
+[PI-INFO] Paramount Iteration,8,10,0.390023,0.013238
+[PI-INFO] Paramount Iteration,14,10,0.389296,0.013398
+[PI-INFO] Paramount Iteration,15,10,0.389286,0.013402
+[PI-INFO] Paramount Iteration,27,10,0.389215,0.013290
+[PI-INFO] Paramount Iteration,31,10,0.389636,0.013272
+[PI-INFO] Paramount Iteration,1,10,0.389940,0.013959
+[PI-INFO] Paramount Iteration,4,10,0.388757,0.013275
+[PI-INFO] Paramount Iteration,6,10,0.389436,0.013609
+[PI-INFO] Paramount Iteration,9,10,0.389953,0.013492
+[PI-INFO] Paramount Iteration,17,10,0.389086,0.013462
+[PI-INFO] Paramount Iteration,13,10,0.388900,0.013051
+[PI-INFO] Paramount Iteration,7,10,0.389281,0.013558
+[PI-INFO] Paramount Iteration,10,10,0.388409,0.013206
+[PI-INFO] Paramount Iteration,5,10,0.388515,0.013337
+[PI-INFO] Paramount Iteration,12,10,0.389752,0.013082
+[PI-INFO] Paramount Iteration,16,10,0.388815,0.013146
+[PI-INFO] Paramount Iteration,23,10,0.389327,0.013119
+[PI-INFO] Paramount Iteration,18,10,0.388996,0.013117
+[PI-INFO] Paramount Iteration,22,10,0.388463,0.013051
+[PI-INFO] Paramount Iteration,26,10,0.388830,0.013322
+[PI-INFO] Paramount Iteration,24,10,0.389556,0.013546
+[PI-INFO] Paramount Iteration,3,10,0.388853,0.013430
+[PI-INFO] Paramount Iteration,29,10,0.388653,0.012973
+[PI-INFO] Paramount Iteration,25,10,0.388815,0.013405
+[PI-INFO] Paramount Iteration,30,10,0.388719,0.013288
+[PI-INFO] Paramount Iteration,19,10,0.388864,0.012837
+[PI-INFO] Paramount Iteration,28,10,0.388249,0.012942
+[PI-INFO] Paramount Iteration,20,10,0.388490,0.012738
+[PI-INFO] Paramount Iteration,21,10,0.388881,0.012771
+[PI-INFO] Paramount Iteration,1,11,0.395799,0.005859
+[PI-INFO] Paramount Iteration,15,11,0.395211,0.005925
+[PI-INFO] Paramount Iteration,26,11,0.394701,0.005871
+[PI-INFO] Paramount Iteration,24,11,0.395421,0.005865
+[PI-INFO] Paramount Iteration,6,11,0.395342,0.005906
+[PI-INFO] Paramount Iteration,2,11,0.395399,0.006046
+[PI-INFO] Paramount Iteration,11,11,0.395893,0.006053
+[PI-INFO] Paramount Iteration,8,11,0.396074,0.006051
+[PI-INFO] Paramount Iteration,9,11,0.395982,0.006029
+[PI-INFO] Paramount Iteration,14,11,0.395224,0.005928
+[PI-INFO] Paramount Iteration,27,11,0.395162,0.005947
+[PI-INFO] Paramount Iteration,30,11,0.394722,0.006003
+[PI-INFO] Paramount Iteration,31,11,0.395583,0.005947
+[PI-INFO] Paramount Iteration,17,11,0.395227,0.006141
+[PI-INFO] Paramount Iteration,7,11,0.395388,0.006107
+[PI-INFO] Paramount Iteration,10,11,0.394547,0.006138
+[PI-INFO] Paramount Iteration,23,11,0.395467,0.006140
+[PI-INFO] Paramount Iteration,18,11,0.395183,0.006187
+[PI-INFO] Paramount Iteration,25,11,0.394885,0.006070
+[PI-INFO] Paramount Iteration,3,11,0.395078,0.006225
+[PI-INFO] Paramount Iteration,12,11,0.396069,0.006317
+[PI-INFO] Paramount Iteration,16,11,0.395131,0.006316
+[PI-INFO] Paramount Iteration,0,11,0.385304,0.006480
+[PI-INFO] Paramount Iteration,4,11,0.395099,0.006342
+[PI-INFO] Paramount Iteration,19,11,0.395263,0.006399
+[PI-INFO] Paramount Iteration,13,11,0.395298,0.006398
+[PI-INFO] Paramount Iteration,5,11,0.394871,0.006356
+[PI-INFO] Paramount Iteration,22,11,0.394819,0.006356
+[PI-INFO] Paramount Iteration,29,11,0.395082,0.006429
+[PI-INFO] Paramount Iteration,28,11,0.394679,0.006430
+[PI-INFO] Paramount Iteration,20,11,0.395249,0.006759
+[PI-INFO] Paramount Iteration,21,11,0.395623,0.006742
+[PI-INFO] Paramount Iteration,8,12,0.402524,0.006450
+[PI-INFO] Paramount Iteration,6,12,0.401910,0.006568
+[PI-INFO] Paramount Iteration,2,12,0.401871,0.006472
+[PI-INFO] Paramount Iteration,14,12,0.401853,0.006629
+[PI-INFO] Paramount Iteration,24,12,0.402067,0.006646
+[PI-INFO] Paramount Iteration,15,12,0.401919,0.006708
+[PI-INFO] Paramount Iteration,7,12,0.401851,0.006463
+[PI-INFO] Paramount Iteration,30,12,0.401328,0.006606
+[PI-INFO] Paramount Iteration,9,12,0.402626,0.006644
+[PI-INFO] Paramount Iteration,17,12,0.401747,0.006520
+[PI-INFO] Paramount Iteration,26,12,0.401517,0.006816
+[PI-INFO] Paramount Iteration,25,12,0.401461,0.006576
+[PI-INFO] Paramount Iteration,31,12,0.402367,0.006784
+[PI-INFO] Paramount Iteration,1,12,0.402663,0.006864
+[PI-INFO] Paramount Iteration,16,12,0.401579,0.006448
+[PI-INFO] Paramount Iteration,0,12,0.391740,0.006436
+[PI-INFO] Paramount Iteration,3,12,0.401661,0.006583
+[PI-INFO] Paramount Iteration,11,12,0.402788,0.006895
+[PI-INFO] Paramount Iteration,10,12,0.401335,0.006788
+[PI-INFO] Paramount Iteration,23,12,0.402255,0.006788
+[PI-INFO] Paramount Iteration,27,12,0.402138,0.006976
+[PI-INFO] Paramount Iteration,4,12,0.401678,0.006579
+[PI-INFO] Paramount Iteration,5,12,0.401412,0.006541
+[PI-INFO] Paramount Iteration,12,12,0.402809,0.006740
+[PI-INFO] Paramount Iteration,18,12,0.402118,0.006935
+[PI-INFO] Paramount Iteration,22,12,0.401488,0.006669
+[PI-INFO] Paramount Iteration,28,12,0.401321,0.006642
+[PI-INFO] Paramount Iteration,13,12,0.402153,0.006855
+[PI-INFO] Paramount Iteration,29,12,0.401826,0.006744
+[PI-INFO] Paramount Iteration,19,12,0.402338,0.007075
+[PI-INFO] Paramount Iteration,20,12,0.401983,0.006734
+[PI-INFO] Paramount Iteration,21,12,0.402419,0.006796
+[PI-INFO] Paramount Iteration,1,13,0.408985,0.006322
+[PI-INFO] Paramount Iteration,7,13,0.408546,0.006695
+[PI-INFO] Paramount Iteration,6,13,0.408707,0.006797
+[PI-INFO] Paramount Iteration,0,13,0.398254,0.006514
+[PI-INFO] Paramount Iteration,2,13,0.408729,0.006858
+[PI-INFO] Paramount Iteration,24,13,0.409026,0.006959
+[PI-INFO] Paramount Iteration,8,13,0.409577,0.007053
+[PI-INFO] Paramount Iteration,15,13,0.408832,0.006913
+[PI-INFO] Paramount Iteration,31,13,0.409196,0.006829
+[PI-INFO] Paramount Iteration,9,13,0.409561,0.006935
+[PI-INFO] Paramount Iteration,14,13,0.408870,0.007017
+[PI-INFO] Paramount Iteration,3,13,0.408408,0.006747
+[PI-INFO] Paramount Iteration,25,13,0.408363,0.006902
+[PI-INFO] Paramount Iteration,27,13,0.408879,0.006741
+[PI-INFO] Paramount Iteration,30,13,0.408310,0.006982
+[PI-INFO] Paramount Iteration,11,13,0.409613,0.006825
+[PI-INFO] Paramount Iteration,26,13,0.408493,0.006976
+[PI-INFO] Paramount Iteration,4,13,0.408571,0.006893
+[PI-INFO] Paramount Iteration,17,13,0.408925,0.007178
+[PI-INFO] Paramount Iteration,5,13,0.408260,0.006848
+[PI-INFO] Paramount Iteration,23,13,0.409145,0.006890
+[PI-INFO] Paramount Iteration,10,13,0.408343,0.007008
+[PI-INFO] Paramount Iteration,16,13,0.408858,0.007279
+[PI-INFO] Paramount Iteration,18,13,0.409080,0.006962
+[PI-INFO] Paramount Iteration,29,13,0.408682,0.006856
+[PI-INFO] Paramount Iteration,13,13,0.409036,0.006883
+[PI-INFO] Paramount Iteration,12,13,0.409895,0.007086
+[PI-INFO] Paramount Iteration,22,13,0.408540,0.007052
+[PI-INFO] Paramount Iteration,28,13,0.408354,0.007033
+[PI-INFO] Paramount Iteration,19,13,0.409128,0.006790
+[PI-INFO] Paramount Iteration,20,13,0.409034,0.007051
+[PI-INFO] Paramount Iteration,21,13,0.409350,0.006931
+[PI-INFO] Paramount Iteration,1,14,0.416012,0.007027
+[PI-INFO] Paramount Iteration,0,14,0.405145,0.006891
+[PI-INFO] Paramount Iteration,6,14,0.415646,0.006939
+[PI-INFO] Paramount Iteration,7,14,0.415537,0.006991
+[PI-INFO] Paramount Iteration,24,14,0.415841,0.006815
+[PI-INFO] Paramount Iteration,2,14,0.415716,0.006987
+[PI-INFO] Paramount Iteration,8,14,0.416488,0.006911
+[PI-INFO] Paramount Iteration,25,14,0.415285,0.006922
+[PI-INFO] Paramount Iteration,31,14,0.416203,0.007007
+[PI-INFO] Paramount Iteration,9,14,0.416521,0.006960
+[PI-INFO] Paramount Iteration,3,14,0.415387,0.006979
+[PI-INFO] Paramount Iteration,30,14,0.415278,0.006968
+[PI-INFO] Paramount Iteration,14,14,0.415906,0.007036
+[PI-INFO] Paramount Iteration,15,14,0.415940,0.007108
+[PI-INFO] Paramount Iteration,26,14,0.415423,0.006930
+[PI-INFO] Paramount Iteration,27,14,0.415838,0.006959
+[PI-INFO] Paramount Iteration,11,14,0.416648,0.007035
+[PI-INFO] Paramount Iteration,17,14,0.415836,0.006911
+[PI-INFO] Paramount Iteration,5,14,0.415264,0.007004
+[PI-INFO] Paramount Iteration,4,14,0.415635,0.007064
+[PI-INFO] Paramount Iteration,23,14,0.416252,0.007107
+[PI-INFO] Paramount Iteration,10,14,0.415422,0.007079
+[PI-INFO] Paramount Iteration,16,14,0.415764,0.006906
+[PI-INFO] Paramount Iteration,18,14,0.416111,0.007031
+[PI-INFO] Paramount Iteration,22,14,0.415507,0.006967
+[PI-INFO] Paramount Iteration,28,14,0.415317,0.006963
+[PI-INFO] Paramount Iteration,29,14,0.415790,0.007108
+[PI-INFO] Paramount Iteration,12,14,0.416940,0.007045
+[PI-INFO] Paramount Iteration,13,14,0.416161,0.007125
+[PI-INFO] Paramount Iteration,19,14,0.416227,0.007099
+[PI-INFO] Paramount Iteration,20,14,0.416046,0.007012
+[PI-INFO] Paramount Iteration,21,14,0.416528,0.007178
+[PI-INFO] Paramount Iteration,1,15,0.423141,0.007129
+[PI-INFO] PI avg,1,0.006791,15
+[PI-INFO] Beta,1,0.000126
+[PI-INFO] Paramount Iteration,0,15,0.412307,0.007162
+[PI-INFO] PI avg,0,0.006807,15
+[PI-INFO] Beta,0,0.000117
+[PI-INFO] Total time,0.412319
+[PI-INFO] Paramount Iteration,7,15,0.422731,0.007194
+[PI-INFO] PI avg,7,0.006808,15
+[PI-INFO] Beta,7,0.000166
+[PI-INFO] Paramount Iteration,24,15,0.423040,0.007199
+[PI-INFO] PI avg,24,0.006809,15
+[PI-INFO] Beta,24,0.000147
+[PI-INFO] Paramount Iteration,6,15,0.422921,0.007275
+[PI-INFO] PI avg,6,0.006812,15
+[PI-INFO] Beta,6,0.000147
+[PI-INFO] Paramount Iteration,25,15,0.422352,0.007067
+[PI-INFO] PI avg,25,0.006813,15
+[PI-INFO] Beta,25,0.000175
+[PI-INFO] Paramount Iteration,2,15,0.422948,0.007232
+[PI-INFO] PI avg,2,0.006815,15
+[PI-INFO] Beta,2,0.000135
+[PI-INFO] Paramount Iteration,8,15,0.423626,0.007138
+[PI-INFO] PI avg,8,0.006817,15
+[PI-INFO] Beta,8,0.000128
+[PI-INFO] Paramount Iteration,9,15,0.423669,0.007148
+[PI-INFO] PI avg,9,0.006825,15
+[PI-INFO] Beta,9,0.000137
+[PI-INFO] Paramount Iteration,14,15,0.423060,0.007154
+[PI-INFO] PI avg,14,0.006828,15
+[PI-INFO] Beta,14,0.000128
+[PI-INFO] Paramount Iteration,17,15,0.423038,0.007202
+[PI-INFO] PI avg,17,0.006840,15
+[PI-INFO] Beta,17,0.000146
+[PI-INFO] Paramount Iteration,15,15,0.423050,0.007110
+[PI-INFO] PI avg,15,0.006827,15
+[PI-INFO] Beta,15,0.000147
+[PI-INFO] Paramount Iteration,13,15,0.423345,0.007184
+[PI-INFO] PI avg,13,0.006875,15
+[PI-INFO] Beta,13,0.000194
+[PI-INFO] Paramount Iteration,10,15,0.422700,0.007278
+[PI-INFO] PI avg,10,0.006862,15
+[PI-INFO] Beta,10,0.000243
+[PI-INFO] Paramount Iteration,5,15,0.422448,0.007184
+[PI-INFO] PI avg,5,0.006841,15
+[PI-INFO] Beta,5,0.000235
+[PI-INFO] Paramount Iteration,12,15,0.424199,0.007259
+[PI-INFO] PI avg,12,0.006874,15
+[PI-INFO] Beta,12,0.000155
+[PI-INFO] Paramount Iteration,16,15,0.422911,0.007147
+[PI-INFO] PI avg,16,0.006850,15
+[PI-INFO] Beta,16,0.000176
+[PI-INFO] Paramount Iteration,23,15,0.423414,0.007162
+[PI-INFO] PI avg,23,0.006850,15
+[PI-INFO] Beta,23,0.000137
+[PI-INFO] Paramount Iteration,18,15,0.423474,0.007363
+[PI-INFO] PI avg,18,0.006874,15
+[PI-INFO] Beta,18,0.000164
+[PI-INFO] Paramount Iteration,22,15,0.422784,0.007277
+[PI-INFO] PI avg,22,0.006868,15
+[PI-INFO] Beta,22,0.000252
+[PI-INFO] Paramount Iteration,26,15,0.422775,0.007352
+[PI-INFO] PI avg,26,0.006840,15
+[PI-INFO] Beta,26,0.000174
+[PI-INFO] Paramount Iteration,3,15,0.422641,0.007254
+[PI-INFO] PI avg,3,0.006830,15
+[PI-INFO] Beta,3,0.000244
+[PI-INFO] Paramount Iteration,29,15,0.422910,0.007120
+[PI-INFO] PI avg,29,0.006863,15
+[PI-INFO] Beta,29,0.000174
+[PI-INFO] Paramount Iteration,27,15,0.423120,0.007282
+[PI-INFO] PI avg,27,0.006837,15
+[PI-INFO] Beta,27,0.000146
+[PI-INFO] Paramount Iteration,30,15,0.422471,0.007193
+[PI-INFO] PI avg,30,0.006828,15
+[PI-INFO] Beta,30,0.000165
+[PI-INFO] Paramount Iteration,19,15,0.423421,0.007194
+[PI-INFO] PI avg,19,0.006882,15
+[PI-INFO] Beta,19,0.000243
+[PI-INFO] Paramount Iteration,28,15,0.422567,0.007250
+[PI-INFO] PI avg,28,0.006866,15
+[PI-INFO] Beta,28,0.000222
+[PI-INFO] Paramount Iteration,31,15,0.423336,0.007133
+[PI-INFO] PI avg,31,0.006823,15
+[PI-INFO] Beta,31,0.000147
+[PI-INFO] Paramount Iteration,4,15,0.422858,0.007223
+[PI-INFO] PI avg,4,0.006850,15
+[PI-INFO] Beta,4,0.000213
+[PI-INFO] Paramount Iteration,11,15,0.423927,0.007279
+[PI-INFO] PI avg,11,0.006849,15
+[PI-INFO] Beta,11,0.000155
+[PI-INFO] Paramount Iteration,20,15,0.423374,0.007328
+[PI-INFO] PI avg,20,0.006903,15
+[PI-INFO] Beta,20,0.000251
+[PI-INFO] Paramount Iteration,21,15,0.423666,0.007138
+[PI-INFO] PI avg,21,0.006898,15
+[PI-INFO] Beta,21,0.000212
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-14-100 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-14-100:22876] 31 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-14-100:22876] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 32 ./src/ExaMiniMD -il input/in.lj"
+	User time (seconds): 0.28
+	System time (seconds): 0.11
+	Percent of CPU this job got: 12%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20340
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 7393
+	Voluntary context switches: 992
+	Involuntary context switches: 54
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
