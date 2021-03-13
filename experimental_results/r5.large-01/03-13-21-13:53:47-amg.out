@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------
+[[22130,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-9-252
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Running with these driver parameters:
+  solver ID    = 3
+
+  Laplacian_27pt:
+    (Nx, Ny, Nz) = (10, 10, 10)
+    (Px, Py, Pz) = (1, 1, 1)
+
+=============================================
+Generate Matrix:
+=============================================
+Spatial Operator:
+  wall clock time = 0.000572 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.000569 seconds
+  cpu MFLOPS      = 0.000000
+
+  RHS vector has unit components
+  Initial guess is 0
+=============================================
+IJ Vector Setup:
+=============================================
+RHS and Initial Guess:
+  wall clock time = 0.000050 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.000021 seconds
+  cpu MFLOPS      = 0.000000
+
+[PI-INFO] Init time,0,0.114279
+[PI-INFO] Paramount Iteration,0,1,0.122476,0.008197
+[PI-INFO] Paramount Iteration,0,2,0.130651,0.008175
+[PI-INFO] Paramount Iteration,0,3,0.138733,0.008082
+[PI-INFO] Paramount Iteration,0,4,0.146813,0.008080
+[PI-INFO] Paramount Iteration,0,5,0.154894,0.008081
+[PI-INFO] Paramount Iteration,0,6,0.162952,0.008058
+[PI-INFO] Paramount Iteration,0,7,0.171026,0.008074
+[PI-INFO] Paramount Iteration,0,8,0.179117,0.008091
+[PI-INFO] Paramount Iteration,0,9,0.187181,0.008064
+[PI-INFO] Paramount Iteration,0,10,0.195459,0.008278
+[PI-INFO] Paramount Iteration,0,11,0.203735,0.008276
+[PI-INFO] Paramount Iteration,0,12,0.212026,0.008291
+[PI-INFO] Paramount Iteration,0,13,0.220282,0.008256
+[PI-INFO] Paramount Iteration,0,14,0.228566,0.008284
+[PI-INFO] Paramount Iteration,0,15,0.236834,0.008268
+[PI-INFO] PI avg,0,0.008170,15
+[PI-INFO] Beta,0,0.000449
+[PI-INFO] Total time,0.236889
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-9-252 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 1 ./test/amg -problem 2"
+	User time (seconds): 0.24
+	System time (seconds): 0.05
+	Percent of CPU this job got: 13%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 18776
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 5862
+	Voluntary context switches: 794
+	Involuntary context switches: 61
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
