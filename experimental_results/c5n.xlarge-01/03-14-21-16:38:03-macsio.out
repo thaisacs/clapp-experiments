@@ -1,0 +1,79 @@
+--------------------------------------------------------------------------
+[[12322,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-13-211
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+[PI-INFO] Init time,0,0.119197
+[PI-INFO] Paramount Iteration,0,1,0.215420,0.096223
+[PI-INFO] Paramount Iteration,0,2,0.311895,0.096475
+[PI-INFO] Paramount Iteration,0,3,0.406037,0.094142
+[PI-INFO] Paramount Iteration,0,4,0.499803,0.093766
+[PI-INFO] Paramount Iteration,0,5,0.593938,0.094135
+[PI-INFO] Paramount Iteration,0,6,0.688032,0.094094
+[PI-INFO] Paramount Iteration,0,7,0.781630,0.093598
+[PI-INFO] Paramount Iteration,0,8,0.875571,0.093941
+[PI-INFO] Paramount Iteration,0,9,0.969981,0.094410
+[PI-INFO] Paramount Iteration,0,10,1.063900,0.093919
+[PI-INFO] Paramount Iteration,0,11,1.157734,0.093834
+[PI-INFO] Paramount Iteration,0,12,1.252131,0.094397
+[PI-INFO] Paramount Iteration,0,13,1.345633,0.093502
+[PI-INFO] Paramount Iteration,0,14,1.439747,0.094114
+[PI-INFO] Paramount Iteration,0,15,1.533921,0.094174
+[PI-INFO] PI avg,0,0.094315,15
+[PI-INFO] Beta,0,0.000005
+[PI-INFO] Total time,1.533928
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-13-211 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 1 ./macsio/macsio --num_dumps 3000"
+	User time (seconds): 1.30
+	System time (seconds): 0.08
+	Percent of CPU this job got: 38%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.59
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 7347
+	Voluntary context switches: 817
+	Involuntary context switches: 8
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 157576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

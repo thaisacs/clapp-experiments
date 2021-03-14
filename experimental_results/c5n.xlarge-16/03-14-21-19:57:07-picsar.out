@@ -1,0 +1,320 @@
+--------------------------------------------------------------------------
+[[14534,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-3-69
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+ _________________________________________________________________
+ 
+  PICSAR
+ _________________________________________________________________
+ Cartesian topology
+ Processor subdivision is                     4                    4                    1
+
+ 
+ SIMULATION PARAMETERS:
+ Dimension:                    3
+ dx, dy, dz:   2.0202020202020202E-007   2.0202020202020202E-007   2.0202020202020202E-007
+ dt:   2.7234004870354126E-016 s  0.27234004516069787      fs
+ Coefficient on dt determined via the CFL (dtcoef):      0.70000
+ Total time:   15.286941766601061      plasma periods:   8.1702014611062384E-014 s
+ Number of steps:                  300
+ Tiles:                    1                    1                    1
+ MPI com current:                    0
+ Current deposition method:                    0
+ Charge deposition algo:                    0
+ Field gathering method:                    0
+ Field gathering plus particle pusher seperated:                    0
+ Current/field gathering order:                    2                    2                    2
+ Particle communication: (partcom=1)
+ Pusher: Boris algorithm (particle_pusher=0)
+ Maxwell derivative coeff:   1.0000000000000000     
+ MPI buffer size:                 2000
+ 
+ Vector length current deposition                    8
+ Vector length charge deposition                   64
+ Vector length field gathering                  256
+ 
+ PLASMA PROPERTIES:
+ Distribution:                    1
+ Density in the lab frame:   1.1000000000000000E+025 m^-3
+ Density in the simulation frame:   1.1000000000000000E+025 m^-3
+ Cold plasma frequency in the lab frame:   187106056556544.47      s^-1
+ cold plasma wavelength:   1.0067293394853861E-005 m   10.067293394853861      um
+ 
+ MPI domain decomposition
+ Topology:                    0
+ Local number of cells:   24    24    99
+ Local number of grid point:   25    25   100
+ Guard cells:    4     4     4
+ 
+ Periodic field bcs X axis
+ Periodic field bcs Y axis
+ Periodic field bcs Z axis
+ FDTD_SOLVER 
+ Particle sorting activated
+ dx:   1.0101010101010101E-007
+ dy:   1.0101010101010101E-007
+ dz:   1.0101010101010101E-007
+ shiftx:  -1.0101010101010101E-007
+ shifty:  -1.0101010101010101E-007
+ shiftz:  -1.0101010101010101E-007
+ 
+ Number of species:                    2
+ laser_antenna
+ Charge:   1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ laser_antenna
+ Charge:  -1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ Output of time statistics non-activated
+ Computation of the time statistics starts at iteration:    0
+
+ No particle dump ( 0)
+
+ Set tile split: done
+ Initialization of the tile arrays: done
+ number of cells per laser wavelength   2.8578838324886471     
+ Laser Waist   3.0000000000000001E-006 m
+ Laser duration   1.6678204759907605E-014  (in s)
+ Laser duration   61.240367839042456       (in dt)
+ Laser peak    0.0000000000000000      dt
+ Laser longitudinal length   5.0000000000000004E-006 m
+ Laser temporal frequency w_laser   1883651567308853.5      s^-1
+ Laser temporal period   3.3356409519815201E-015 s
+ Laser temporal period   12.248073567808488      dt
+ Laser tau / laser period    5.0000000000000009     
+ number of cells per laser wavelength   2.8578838324886471     
+ LASER EMAX   3210701160308.8057        3210701160308.8057        0.0000000000000000     
+ Creation of the particles: done
+ Total memory (GB) for grid arrays   0.22044960000000000     
+ Total memory (GB) for grid tile arrays    4.7239200000000002E-002
+ Total memory (GB) for particle tile arrays   0.24839654400000000     
+ Total memory (GB)  0.51608534399999995     
+ Avg memory (GB) /MPI process    3.2255333999999997E-002
+
+  Initilization of the diags
+mkdir: cannot create directory ‘RESULTS’: File exists
+rm: cannot remove 'RESULTS/*': No such file or directory
+ Initialization of the temporal diagnostics
+ Rank   0, creation of the file                 ./RESULTS/kinE
+ Rank   1, creation of the file                  ./RESULTS/exE
+ Rank   8, creation of the file                  ./RESULTS/rho
+ Rank   2, creation of the file                  ./RESULTS/eyE
+ Rank   6, creation of the file                  ./RESULTS/bzE
+ Rank   5, creation of the file                  ./RESULTS/byE
+ Rank   4, creation of the file                  ./RESULTS/bxE
+ Rank   9, creation of the file                 ./RESULTS/divE
+ Rank   3, creation of the file                  ./RESULTS/ezE
+ Rank   7, creation of the file             ./RESULTS/divE-rho
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/rho': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/eyE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/exE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/bzE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/byE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/bxE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/divE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/ezE': No such file or directory
+
+Error termination. Backtrace:
+At line 386 of file src/diags/diags.F90 (unit = 42)
+Fortran runtime error: Cannot open file './RESULTS/divE-rho': No such file or directory
+
+Error termination. Backtrace:
+#0  0x7f0cf889d32a
+#1  0x7f0cf889ded5
+#2  0x7f0cf889e69d
+#3  0x7f0cf8a10ecd
+#4  0x7f0cf8a11214
+#5  0x5587abc6b3ca
+#6  0x5587abc6f0d1
+#7  0x5587abc42baa
+#8  0x5587abc42a3e
+#9  0x7f0cf8114bf6
+#10  0x5587abc42a79
+#11  0xffffffffffffffff
+#0  0x7f97d5af732a
+#1  0x7f97d5af7ed5
+#2  0x7f97d5af869d
+#3  0x7f97d5c6aecd
+#4  0x7f97d5c6b214
+#5  0x5636e98c43ca
+#0  0x7fd434cf832a
+#1  0x7fd434cf8ed5
+#2  0x7fd434cf969d
+#3  0x7fd434e6becd
+#4  0x7fd434e6c214
+#5  0x55a3b2b043ca
+#6  0x55a3b2b080d1
+#7  0x55a3b2adbbaa
+#8  0x55a3b2adba3e
+#9  0x7fd43456fbf6
+#10  0x55a3b2adba79
+#11  0xffffffffffffffff
+#6  0x5636e98c80d1
+#7  0x5636e989bbaa
+#8  0x5636e989ba3e
+#9  0x7f97d536ebf6
+#10  0x5636e989ba79
+#11  0xffffffffffffffff
+#0  0x7fd528cb932a
+#1  0x7fd528cb9ed5
+#2  0x7fd528cba69d
+#3  0x7fd528e2cecd
+#4  0x7fd528e2d214
+#5  0x560a020b53ca
+#6  0x560a020b90d1
+#7  0x560a0208cbaa
+#0  0x7f506141632a
+#1  0x7f5061416ed5
+#2  0x7f506141769d
+#3  0x7f5061589ecd
+#4  0x7f506158a214
+#5  0x55b4d8f5e3ca
+#6  0x55b4d8f620d1
+#7  0x55b4d8f35baa
+#8  0x55b4d8f35a3e
+#9  0x7f5060c8dbf6
+#10  0x55b4d8f35a79
+#11  0xffffffffffffffff
+#8  0x560a0208ca3e
+#9  0x7fd528530bf6
+#10  0x560a0208ca79
+#11  0xffffffffffffffff
+#0  0x7f6f9eb2e32a
+#1  0x7f6f9eb2eed5
+#2  0x7f6f9eb2f69d
+#3  0x7f6f9eca1ecd
+#4  0x7f6f9eca2214
+#5  0x55f6899353ca
+#6  0x55f6899390d1
+#7  0x55f68990cbaa
+#8  0x55f68990ca3e
+#9  0x7f6f9e3a5bf6
+#10  0x55f68990ca79
+#11  0xffffffffffffffff
+#0  0x7f064b43b32a
+#1  0x7f064b43bed5
+#2  0x7f064b43c69d
+#3  0x7f064b5aeecd
+#4  0x7f064b5af214
+#5  0x5600593923ca
+#6  0x5600593960d1
+#7  0x560059369baa
+#8  0x560059369a3e
+#9  0x7f064acb2bf6
+#10  0x560059369a79
+#0  0x7fc7893a632a
+#1  0x7fc7893a6ed5
+#2  0x7fc7893a769d
+#3  0x7fc789519ecd
+#4  0x7fc78951a214
+#5  0x55f245ece3ca
+#6  0x55f245ed20d1
+#7  0x55f245ea5baa
+#8  0x55f245ea5a3e
+#0  0x7fb34634132a
+#1  0x7fb346341ed5
+#2  0x7fb34634269d
+#3  0x7fb3464b4ecd
+#4  0x7fb3464b5214
+#5  0x5561a33ee3ca
+#6  0x5561a33f20d1
+#7  0x5561a33c5baa
+#8  0x5561a33c5a3e
+#9  0x7fb345bb8bf6
+#10  0x5561a33c5a79
+#11  0xffffffffffffffff
+#11  0xffffffffffffffff
+#9  0x7fc788c1dbf6
+#10  0x55f245ea5a79
+#11  0xffffffffffffffff
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+An MPI communication peer process has unexpectedly disconnected.  This
+usually indicates a failure in the peer process (e.g., a crash or
+otherwise exiting without calling MPI_FINALIZE first).
+
+Although this local MPI process will likely now behave unpredictably
+(it may even hang or crash), the root cause of this problem is the
+failure of the peer -- that is what you need to investigate.  For
+example, there may be a core file that you can examine.  More
+generally: such peer hangups are frequently caused by application bugs
+or other external events.
+
+  Local host: ip-172-31-6-117
+  Local PID:  18794
+  Peer host:  ip-172-31-14-32
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[14534,1],6]
+  Exit code:    2
+--------------------------------------------------------------------------
+[ip-172-31-3-69:17095] 15 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-3-69:17095] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[ip-172-31-3-69:17095] 4 more processes have sent help message help-mpi-btl-tcp.txt / peer hung up
+Command exited with non-zero status 2
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 16 ./fortran_bin/picsar examples/example_decks_fortran/laser-16.pixr"
+	User time (seconds): 0.97
+	System time (seconds): 0.28
+	Percent of CPU this job got: 43%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 36804
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 15030
+	Voluntary context switches: 1094
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 2

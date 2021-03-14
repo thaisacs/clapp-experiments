@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------
+[[30672,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-8-222
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Running with these driver parameters:
+  solver ID    = 3
+
+  Laplacian_27pt:
+    (Nx, Ny, Nz) = (10, 20, 10)
+    (Px, Py, Pz) = (1, 2, 1)
+
+=============================================
+Generate Matrix:
+=============================================
+Spatial Operator:
+  wall clock time = 0.017840 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.030077 seconds
+  cpu MFLOPS      = 0.000000
+
+  RHS vector has unit components
+  Initial guess is 0
+=============================================
+IJ Vector Setup:
+=============================================
+RHS and Initial Guess:
+  wall clock time = 0.000217 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.000217 seconds
+  cpu MFLOPS      = 0.000000
+
+[PI-INFO] Init time,0,0.137383
+[PI-INFO] Init time,1,0.130263
+[PI-INFO] Paramount Iteration,0,1,0.167383,0.030001
+[PI-INFO] Paramount Iteration,1,1,0.160275,0.030012
+[PI-INFO] Paramount Iteration,0,2,0.196698,0.029315
+[PI-INFO] Paramount Iteration,1,2,0.189595,0.029320
+[PI-INFO] Paramount Iteration,0,3,0.226530,0.029832
+[PI-INFO] Paramount Iteration,1,3,0.219422,0.029827
+[PI-INFO] Paramount Iteration,0,4,0.256502,0.029972
+[PI-INFO] Paramount Iteration,1,4,0.249403,0.029981
+[PI-INFO] Paramount Iteration,0,5,0.286507,0.030005
+[PI-INFO] Paramount Iteration,1,5,0.279404,0.030001
+[PI-INFO] Paramount Iteration,0,6,0.316414,0.029907
+[PI-INFO] Paramount Iteration,1,6,0.309305,0.029901
+[PI-INFO] Paramount Iteration,0,7,0.346321,0.029907
+[PI-INFO] Paramount Iteration,1,7,0.339213,0.029908
+[PI-INFO] Paramount Iteration,0,8,0.376223,0.029902
+[PI-INFO] Paramount Iteration,1,8,0.369123,0.029910
+[PI-INFO] Paramount Iteration,0,9,0.407197,0.030974
+[PI-INFO] Paramount Iteration,1,9,0.400088,0.030965
+[PI-INFO] Paramount Iteration,0,10,0.438037,0.030840
+[PI-INFO] Paramount Iteration,1,10,0.430933,0.030845
+[PI-INFO] Paramount Iteration,0,11,0.468948,0.030911
+[PI-INFO] Paramount Iteration,1,11,0.461845,0.030912
+[PI-INFO] Paramount Iteration,0,12,0.499738,0.030790
+[PI-INFO] Paramount Iteration,1,12,0.492631,0.030786
+[PI-INFO] Paramount Iteration,0,13,0.530589,0.030851
+[PI-INFO] Paramount Iteration,1,13,0.523483,0.030852
+[PI-INFO] Paramount Iteration,0,14,0.562174,0.031585
+[PI-INFO] Paramount Iteration,1,14,0.555065,0.031582
+[PI-INFO] Paramount Iteration,0,15,0.593793,0.031619
+[PI-INFO] PI avg,0,0.030427,15
+[PI-INFO] Beta,0,0.000088
+[PI-INFO] Total time,0.593833
+[PI-INFO] Paramount Iteration,1,15,0.586689,0.031624
+[PI-INFO] PI avg,1,0.030428,15
+[PI-INFO] Beta,1,0.000112
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-8-222 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-8-222:18353] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-8-222:18353] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./test/amg -problem 2"
+	User time (seconds): 1.69
+	System time (seconds): 0.21
+	Percent of CPU this job got: 60%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 7424
+	Voluntary context switches: 857
+	Involuntary context switches: 104
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

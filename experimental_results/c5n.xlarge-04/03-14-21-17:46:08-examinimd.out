@@ -1,0 +1,169 @@
+--------------------------------------------------------------------------
+[[33855,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-8-211
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 40 0 40 0 40 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 256000 64000
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232820 0.000000 0.000000e+00
+[PI-INFO] Init time,0,0.555780
+[PI-INFO] Init time,2,0.548154
+[PI-INFO] Init time,3,0.548200
+[PI-INFO] Init time,1,0.548198
+[PI-INFO] Paramount Iteration,2,1,0.584951,0.036797
+[PI-INFO] Paramount Iteration,3,1,0.584943,0.036743
+[PI-INFO] Paramount Iteration,1,1,0.584973,0.036776
+[PI-INFO] Paramount Iteration,0,1,0.592765,0.036985
+[PI-INFO] Paramount Iteration,0,2,0.629335,0.036570
+[PI-INFO] Paramount Iteration,1,2,0.621687,0.036714
+[PI-INFO] Paramount Iteration,2,2,0.621783,0.036832
+[PI-INFO] Paramount Iteration,3,2,0.621905,0.036962
+[PI-INFO] Paramount Iteration,0,3,0.666120,0.036785
+[PI-INFO] Paramount Iteration,2,3,0.658510,0.036727
+[PI-INFO] Paramount Iteration,3,3,0.658585,0.036680
+[PI-INFO] Paramount Iteration,1,3,0.658659,0.036972
+[PI-INFO] Paramount Iteration,2,4,0.695341,0.036831
+[PI-INFO] Paramount Iteration,3,4,0.695335,0.036750
+[PI-INFO] Paramount Iteration,0,4,0.703026,0.036906
+[PI-INFO] Paramount Iteration,1,4,0.695537,0.036878
+[PI-INFO] Paramount Iteration,0,5,0.739748,0.036722
+[PI-INFO] Paramount Iteration,3,5,0.732122,0.036787
+[PI-INFO] Paramount Iteration,2,5,0.732155,0.036814
+[PI-INFO] Paramount Iteration,1,5,0.732317,0.036780
+[PI-INFO] Paramount Iteration,0,6,0.776381,0.036633
+[PI-INFO] Paramount Iteration,2,6,0.768873,0.036718
+[PI-INFO] Paramount Iteration,3,6,0.769076,0.036954
+[PI-INFO] Paramount Iteration,1,6,0.769159,0.036842
+[PI-INFO] Paramount Iteration,0,7,0.813390,0.037009
+[PI-INFO] Paramount Iteration,2,7,0.805722,0.036849
+[PI-INFO] Paramount Iteration,3,7,0.805813,0.036737
+[PI-INFO] Paramount Iteration,1,7,0.805784,0.036625
+[PI-INFO] Paramount Iteration,0,8,0.850216,0.036826
+[PI-INFO] Paramount Iteration,1,8,0.842598,0.036814
+[PI-INFO] Paramount Iteration,2,8,0.842702,0.036980
+[PI-INFO] Paramount Iteration,3,8,0.842768,0.036955
+[PI-INFO] Paramount Iteration,0,9,0.887689,0.037473
+[PI-INFO] Paramount Iteration,1,9,0.880164,0.037566
+[PI-INFO] Paramount Iteration,3,9,0.880286,0.037518
+[PI-INFO] Paramount Iteration,2,9,0.880361,0.037659
+10 1.266844 -6.133420 -4.233161 0.409536 6.250972e+06
+[PI-INFO] Paramount Iteration,0,10,0.965343,0.077654
+[PI-INFO] Paramount Iteration,2,10,0.957749,0.077388
+[PI-INFO] Paramount Iteration,3,10,0.957801,0.077515
+[PI-INFO] Paramount Iteration,1,10,0.957784,0.077620
+[PI-INFO] Paramount Iteration,0,11,1.004744,0.039401
+[PI-INFO] Paramount Iteration,1,11,0.997143,0.039359
+[PI-INFO] Paramount Iteration,3,11,0.997256,0.039455
+[PI-INFO] Paramount Iteration,2,11,0.997264,0.039515
+[PI-INFO] Paramount Iteration,1,12,1.037861,0.040718
+[PI-INFO] Paramount Iteration,3,12,1.038060,0.040804
+[PI-INFO] Paramount Iteration,0,12,1.045779,0.041035
+[PI-INFO] Paramount Iteration,2,12,1.038186,0.040922
+[PI-INFO] Paramount Iteration,0,13,1.087921,0.042142
+[PI-INFO] Paramount Iteration,3,13,1.080354,0.042294
+[PI-INFO] Paramount Iteration,1,13,1.080294,0.042433
+[PI-INFO] Paramount Iteration,2,13,1.080451,0.042265
+[PI-INFO] Paramount Iteration,3,14,1.123645,0.043291
+[PI-INFO] Paramount Iteration,1,14,1.123609,0.043315
+[PI-INFO] Paramount Iteration,0,14,1.131401,0.043480
+[PI-INFO] Paramount Iteration,2,14,1.123823,0.043372
+[PI-INFO] Paramount Iteration,0,15,1.175373,0.043972
+[PI-INFO] PI avg,0,0.041306,15
+[PI-INFO] Beta,0,0.000047
+[PI-INFO] Total time,1.175401
+[PI-INFO] Paramount Iteration,2,15,1.167701,0.043878
+[PI-INFO] PI avg,2,0.041303,15
+[PI-INFO] Beta,2,0.000044
+[PI-INFO] Paramount Iteration,1,15,1.167767,0.044158
+[PI-INFO] PI avg,1,0.041305,15
+[PI-INFO] Beta,1,0.000047
+[PI-INFO] Paramount Iteration,3,15,1.167954,0.044309
+[PI-INFO] PI avg,3,0.041317,15
+[PI-INFO] Beta,3,0.000043
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-8-211 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-8-211:18071] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-8-211:18071] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 4 ./src/ExaMiniMD -il input/in.lj"
+	User time (seconds): 1.08
+	System time (seconds): 0.03
+	Percent of CPU this job got: 29%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 54972
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 16597
+	Voluntary context switches: 868
+	Involuntary context switches: 9
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
