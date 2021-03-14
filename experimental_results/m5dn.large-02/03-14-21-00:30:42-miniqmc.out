@@ -1,0 +1,114 @@
+--------------------------------------------------------------------------
+[[18710,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-15-110
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+miniqmc git branch: HEAD
+miniqmc git commit: a76fb2ca42e30f32fc97e54352a380ee541ca2fa
+
+Number of orbitals/splines = 192
+Tile size = 192
+Number of tiles = 1
+Number of electrons = 384
+Rmax = 1.7
+Iterations = 10000
+OpenMP threads = 1
+MPI processes = 2
+
+SPO coefficients size = 98304000 bytes (93.75 MB)
+Using SoA distance table, Jastrow + einspline, 
+and determinant update.
+[PI-INFO] Init time,0,0.423173
+[PI-INFO] Init time,1,0.417501
+[PI-INFO] Paramount Iteration,1,1,0.469557,0.052056
+[PI-INFO] Paramount Iteration,0,1,0.477659,0.054486
+[PI-INFO] Paramount Iteration,1,2,0.522654,0.053097
+[PI-INFO] Paramount Iteration,0,2,0.532553,0.054894
+[PI-INFO] Paramount Iteration,1,3,0.576835,0.054181
+[PI-INFO] Paramount Iteration,0,3,0.588868,0.056315
+[PI-INFO] Paramount Iteration,1,4,0.629622,0.052787
+[PI-INFO] Paramount Iteration,0,4,0.642903,0.054035
+[PI-INFO] Paramount Iteration,1,5,0.699005,0.069383
+[PI-INFO] Paramount Iteration,0,5,0.715014,0.072111
+[PI-INFO] Paramount Iteration,1,6,0.761341,0.062336
+[PI-INFO] Paramount Iteration,0,6,0.781820,0.066806
+[PI-INFO] Paramount Iteration,1,7,0.824909,0.063568
+[PI-INFO] Paramount Iteration,0,7,0.847438,0.065618
+[PI-INFO] Paramount Iteration,1,8,0.893554,0.068645
+[PI-INFO] Paramount Iteration,0,8,0.917913,0.070475
+[PI-INFO] Paramount Iteration,1,9,0.974072,0.080518
+[PI-INFO] Paramount Iteration,0,9,1.000969,0.083056
+[PI-INFO] Paramount Iteration,1,10,1.040092,0.066020
+[PI-INFO] Paramount Iteration,0,10,1.068877,0.067908
+[PI-INFO] Paramount Iteration,1,11,1.104680,0.064588
+[PI-INFO] Paramount Iteration,0,11,1.135733,0.066856
+[PI-INFO] Paramount Iteration,1,12,1.184242,0.079562
+[PI-INFO] Paramount Iteration,0,12,1.218871,0.083138
+[PI-INFO] Paramount Iteration,1,13,1.274018,0.089776
+[PI-INFO] Paramount Iteration,0,13,1.312245,0.093374
+[PI-INFO] Paramount Iteration,1,14,1.348425,0.074407
+[PI-INFO] Paramount Iteration,0,14,1.390349,0.078104
+[PI-INFO] Paramount Iteration,1,15,1.416252,0.067827
+[PI-INFO] PI avg,1,0.066583,15
+[PI-INFO] Beta,1,0.000024
+[PI-INFO] Paramount Iteration,0,15,1.462423,0.072074
+[PI-INFO] PI avg,0,0.069283,15
+[PI-INFO] Beta,0,0.000021
+[PI-INFO] Total time,1.462445
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-15-110 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-15-110:15981] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-15-110:15981] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 2 ./bin/miniqmc -n 10000"
+	User time (seconds): 1.33
+	System time (seconds): 0.06
+	Percent of CPU this job got: 34%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 116772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 30223
+	Voluntary context switches: 840
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
