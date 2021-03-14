@@ -1,0 +1,94 @@
+--------------------------------------------------------------------------
+[[28217,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-2-78
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+miniqmc git branch: HEAD
+miniqmc git commit: a76fb2ca42e30f32fc97e54352a380ee541ca2fa
+
+Number of orbitals/splines = 192
+Tile size = 192
+Number of tiles = 1
+Number of electrons = 384
+Rmax = 1.7
+Iterations = 10000
+OpenMP threads = 1
+MPI processes = 1
+
+SPO coefficients size = 98304000 bytes (93.75 MB)
+Using SoA distance table, Jastrow + einspline, 
+and determinant update.
+[PI-INFO] Init time,0,0.461815
+[PI-INFO] Paramount Iteration,0,1,0.517073,0.055258
+[PI-INFO] Paramount Iteration,0,2,0.574404,0.057331
+[PI-INFO] Paramount Iteration,0,3,0.632932,0.058528
+[PI-INFO] Paramount Iteration,0,4,0.690219,0.057287
+[PI-INFO] Paramount Iteration,0,5,0.764824,0.074605
+[PI-INFO] Paramount Iteration,0,6,0.832315,0.067491
+[PI-INFO] Paramount Iteration,0,7,0.900562,0.068247
+[PI-INFO] Paramount Iteration,0,8,0.973342,0.072780
+[PI-INFO] Paramount Iteration,0,9,1.058400,0.085058
+[PI-INFO] Paramount Iteration,0,10,1.128188,0.069788
+[PI-INFO] Paramount Iteration,0,11,1.197777,0.069589
+[PI-INFO] Paramount Iteration,0,12,1.283150,0.085373
+[PI-INFO] Paramount Iteration,0,13,1.378956,0.095806
+[PI-INFO] Paramount Iteration,0,14,1.459077,0.080121
+[PI-INFO] Paramount Iteration,0,15,1.531431,0.072354
+[PI-INFO] PI avg,0,0.071308,15
+[PI-INFO] Beta,0,0.000029
+[PI-INFO] Total time,1.531462
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-2-78 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 1 ./bin/miniqmc -n 10000"
+	User time (seconds): 1.41
+	System time (seconds): 0.06
+	Percent of CPU this job got: 41%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 116828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 30089
+	Voluntary context switches: 773
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

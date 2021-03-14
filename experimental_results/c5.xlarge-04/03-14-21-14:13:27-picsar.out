@@ -1,0 +1,270 @@
+--------------------------------------------------------------------------
+[[25033,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-1-12
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+ _________________________________________________________________
+ 
+  PICSAR
+ _________________________________________________________________
+ Cartesian topology
+ Processor subdivision is                     2                    2                    1
+
+ 
+ SIMULATION PARAMETERS:
+ Dimension:                    3
+ dx, dy, dz:   2.0202020202020202E-007   2.0202020202020202E-007   2.0202020202020202E-007
+ dt:   2.7234004870354126E-016 s  0.27234004516069787      fs
+ Coefficient on dt determined via the CFL (dtcoef):      0.70000
+ Total time:   15.286941766601061      plasma periods:   8.1702014611062384E-014 s
+ Number of steps:                  300
+ Tiles:                    1                    1                    1
+ MPI com current:                    0
+ Current deposition method:                    0
+ Charge deposition algo:                    0
+ Field gathering method:                    0
+ Field gathering plus particle pusher seperated:                    0
+ Current/field gathering order:                    2                    2                    2
+ Particle communication: (partcom=1)
+ Pusher: Boris algorithm (particle_pusher=0)
+ Maxwell derivative coeff:   1.0000000000000000     
+ MPI buffer size:                 2000
+ 
+ Vector length current deposition                    8
+ Vector length charge deposition                   64
+ Vector length field gathering                  256
+ 
+ PLASMA PROPERTIES:
+ Distribution:                    1
+ Density in the lab frame:   1.1000000000000000E+025 m^-3
+ Density in the simulation frame:   1.1000000000000000E+025 m^-3
+ Cold plasma frequency in the lab frame:   187106056556544.47      s^-1
+ cold plasma wavelength:   1.0067293394853861E-005 m   10.067293394853861      um
+ 
+ MPI domain decomposition
+ Topology:                    0
+ Local number of cells:   49    49    99
+ Local number of grid point:   50    50   100
+ Guard cells:    4     4     4
+ 
+ Periodic field bcs X axis
+ Periodic field bcs Y axis
+ Periodic field bcs Z axis
+ FDTD_SOLVER 
+ Particle sorting activated
+ dx:   1.0101010101010101E-007
+ dy:   1.0101010101010101E-007
+ dz:   1.0101010101010101E-007
+ shiftx:  -1.0101010101010101E-007
+ shifty:  -1.0101010101010101E-007
+ shiftz:  -1.0101010101010101E-007
+ 
+ Number of species:                    2
+ laser_antenna
+ Charge:   1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ laser_antenna
+ Charge:  -1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ Output of time statistics non-activated
+ Computation of the time statistics starts at iteration:    0
+
+ No particle dump ( 0)
+
+ Set tile split: done
+ Initialization of the tile arrays: done
+ number of cells per laser wavelength   2.8578838324886471     
+ Laser Waist   3.0000000000000001E-006 m
+ Laser duration   1.6678204759907605E-014  (in s)
+ Laser duration   61.240367839042456       (in dt)
+ Laser peak    0.0000000000000000      dt
+ Laser longitudinal length   5.0000000000000004E-006 m
+ Laser temporal frequency w_laser   1883651567308853.5      s^-1
+ Laser temporal period   3.3356409519815201E-015 s
+ Laser temporal period   12.248073567808488      dt
+ Laser tau / laser period    5.0000000000000009     
+ number of cells per laser wavelength   2.8578838324886471     
+ LASER EMAX   3210701160308.8057        3210701160308.8057        0.0000000000000000     
+ Creation of the particles: done
+ Total memory (GB) for grid arrays   0.16558214399999999     
+ Total memory (GB) for grid tile arrays    3.5481888000000003E-002
+ Total memory (GB) for particle tile arrays   0.24839654400000000     
+ Total memory (GB)  0.44946057600000000     
+ Avg memory (GB) /MPI process   0.11236514400000000     
+
+  Initilization of the diags
+mkdir: cannot create directory ‘RESULTS’: File exists
+rm: cannot remove 'RESULTS/*': No such file or directory
+ Initialization of the temporal diagnostics
+ Creation of the file                 ./RESULTS/kinE
+ Creation of the file                  ./RESULTS/exE
+ Creation of the file                  ./RESULTS/eyE
+ Creation of the file                  ./RESULTS/ezE
+ Creation of the file                  ./RESULTS/bxE
+ Creation of the file                  ./RESULTS/byE
+ Creation of the file                  ./RESULTS/bzE
+ Creation of the file             ./RESULTS/divE-rho
+ Creation of the file                  ./RESULTS/rho
+ Creation of the file                 ./RESULTS/divE
+
+ nsteps =                   300
+[PI-INFO] Init time,0,0.194198
+[PI-INFO] Init time,2,0.186298
+[PI-INFO] Init time,1,0.185846
+[PI-INFO] Init time,3,0.185779
+ Write electric field ex
+*** stack smashing detected ***: <unknown> terminated
+*** stack smashing detected ***: <unknown> terminated
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+*** stack smashing detected ***: <unknown> terminated
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+*** stack smashing detected ***: <unknown> terminated
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7fc381b6032a
+#1  0x7fc381b5f503
+#2  0x7fc3813f503f
+#3  0x7fc3813f4fb7
+#4  0x7fc3813f6920
+#5  0x7fc38143f966
+#6  0x7fc3814eab60
+#7  0x7fc3814eab21
+#8  0x7fc366daac00
+#9  0x7fc366dab077
+#10  0x7fc366dab0e1
+#11  0x7fc381fc4ba9
+#12  0x7fc381f6119f
+#13  0x7fc381fa98e6
+#14  0x7fc382261bf8
+#0  0x7f5867e1f32a
+#1  0x7f5867e1e503
+#2  0x7f58676b403f
+#3  0x7f58676b3fb7
+#4  0x7f58676b5920
+#5  0x7f58676fe966
+#6  0x7f58677a9b60
+#7  0x7f58677a9b21
+#8  0x7f584d0d1c00
+#9  0x7f584d0d2077
+#10  0x7f584d0d20e1
+#11  0x7f5868283ba9
+#12  0x7f586822019f
+#13  0x7f58682688e6
+#14  0x7f5868520bf8
+#15  0x55b60b48aed3
+#16  0x55b60b48d95a
+#15  0x559115360ed3
+#16  0x55911536395a
+#17  0x559115325dce
+#18  0x55911531dbc4
+#19  0x55911531da3e
+#20  0x7fc3813d7bf6
+#21  0x55911531da79
+#22  0xffffffffffffffff
+#17  0x55b60b44fdce
+#18  0x55b60b447bc4
+#19  0x55b60b447a3e
+#20  0x7f5867696bf6
+#21  0x55b60b447a79
+#22  0xffffffffffffffff
+#0  0x7fb65262e32a
+#1  0x7fb65262d503
+#2  0x7fb651ec303f
+#3  0x7fb651ec2fb7
+#4  0x7fb651ec4920
+#5  0x7fb651f0d966
+#6  0x7fb651fb8b60
+#7  0x7fb651fb8b21
+#8  0x7fb6379fec00
+#9  0x7fb6379ff077
+#10  0x7fb6379ff0e1
+#11  0x7fb652a92ba9
+#12  0x7fb652a2f19f
+#13  0x7fb652a778e6
+#14  0x7fb652d2fbf8
+#15  0x5569540d4ed3
+#16  0x5569540d795a
+#17  0x556954099dce
+#18  0x556954091bc4
+#19  0x556954091a3e
+#20  0x7fb651ea5bf6
+#21  0x556954091a79
+#22  0xffffffffffffffff
+#0  0x7f0fe009f32a
+#1  0x7f0fe009e503
+#2  0x7f0fdf93403f
+#3  0x7f0fdf933fb7
+#4  0x7f0fdf935920
+#5  0x7f0fdf97e966
+#6  0x7f0fdfa29b60
+#7  0x7f0fdfa29b21
+#8  0x7f0fc586dc00
+#9  0x7f0fc586e077
+#10  0x7f0fc586e0e1
+#11  0x7f0fe0503ba9
+#12  0x7f0fe04a019f
+#13  0x7f0fe04e88e6
+#14  0x7f0fe07a0bf8
+#15  0x55641beffed3
+#16  0x55641bf0295a
+#17  0x55641bec4dce
+#18  0x55641bebcbc4
+#19  0x55641bebca3e
+#20  0x7f0fdf916bf6
+#21  0x55641bebca79
+#22  0xffffffffffffffff
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 29144 on node 172.31.2.160 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+[ip-172-31-1-12:19006] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-1-12:19006] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 134
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 4 ./fortran_bin/picsar examples/example_decks_fortran/laser-4.pixr"
+	User time (seconds): 0.13
+	System time (seconds): 0.10
+	Percent of CPU this job got: 11%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 134080
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 46682
+	Voluntary context switches: 900
+	Involuntary context switches: 8
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 134

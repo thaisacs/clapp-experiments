@@ -1,0 +1,248 @@
+--------------------------------------------------------------------------
+[[25590,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-1-12
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+ _________________________________________________________________
+ 
+  PICSAR
+ _________________________________________________________________
+ Cartesian topology
+ Processor subdivision is                     2                    2                    1
+
+ 
+ SIMULATION PARAMETERS:
+ Dimension:                    2
+ dx, dy, dz:   1.0050251256281407E-007   1.7976931348623157E+308   1.0050251256281407E-007
+ dt:   3.3524029668155986E-016 s  0.33524029232045371      fs
+ Coefficient on dt determined via the CFL (dtcoef):      0.70000
+ Total time:   6.3352744810042019      plasma periods:   3.3859269964837547E-014 s
+ Number of steps:                  101
+ Tiles:                    1                    1                    1
+ MPI com current:                    0
+ Current deposition method:                    0
+ Charge deposition algo:                    0
+ Field gathering method:                    0
+ Field gathering plus particle pusher seperated:                    0
+ Current/field gathering order:                    2                    2                    2
+ Particle communication: (partcom=1)
+ Pusher: Boris algorithm (particle_pusher=0)
+ MPI buffer size:                 2000
+ 
+ Vector length current deposition                    8
+ Vector length charge deposition                   64
+ Vector length field gathering                  256
+ 
+ PLASMA PROPERTIES:
+ Distribution:                    1
+ Density in the lab frame:   1.1000000000000000E+025 m^-3
+ Density in the simulation frame:   1.1000000000000000E+025 m^-3
+ Cold plasma frequency in the lab frame:   187106056556544.47      s^-1
+ cold plasma wavelength:   1.0067293394853861E-005 m   10.067293394853861      um
+ 
+ MPI domain decomposition
+ Topology:                    0
+ Local number of cells:   99     1   199
+ Local number of grid point:  100     2   200
+ Guard cells:    3     0     3
+ 
+ Periodic field bcs X axis
+ Periodic field bcs Y axis
+ Periodic field bcs Z axis
+ Particle sorting activated
+ dx:   5.0251256281407036E-008
+ dy:   8.9884656743115785E+307
+ dz:   5.0251256281407036E-008
+ shiftx:  -5.0251256281407036E-008
+ shifty:  -8.9884656743115785E+307
+ shiftz:  -5.0251256281407036E-008
+ 
+ Number of species:                    2
+ laser_antenna
+ Charge:   1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ laser_antenna
+ Charge:  -1.0000000000000000     
+ Drift velocity:   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Sorting period:                    0
+ Sorting start:                    0
+ 
+ Output of time statistics non-activated
+ Computation of the time statistics starts at iteration:    0
+
+ No particle dump ( 0)
+
+ Set tile split: done
+ Initialization of the tile arrays: done
+ number of cells per laser wavelength   28.142849891224589     
+ Laser Waist   2000000.0000000000      m
+ Laser duration   1.0006922855944562E-014  (in s)
+ Laser duration   29.850000000000001       (in dt)
+ Laser peak    0.0000000000000000      dt
+ Laser longitudinal length   3.0000000000000001E-006 m
+ Laser temporal frequency w_laser   470912891827213.38      s^-1
+ Laser temporal period   1.3342563807926080E-014 s
+ Laser temporal period   39.799999999999997      dt
+ Laser tau / laser period   0.75000000000000011     
+ number of cells per laser wavelength   28.142849891224589     
+ LASER EMAX   802675290077.20142        802675290077.20142        0.0000000000000000     
+ Creation of the particles: done
+ Total memory (GB) for grid arrays    1.9657344000000000E-002
+ Total memory (GB) for grid tile arrays    4.2122879999999998E-003
+ Total memory (GB) for particle tile arrays    2.0275712000000001E-002
+ Total memory (GB)   4.4145344000000003E-002
+ Avg memory (GB) /MPI process    1.1036336000000001E-002
+[PI-INFO] Init time,2,0.133499
+[PI-INFO] Init time,1,0.132970
+
+  Initilization of the diags
+[PI-INFO] Init time,3,0.133731
+mkdir: cannot create directory ‘RESULTS’: File exists
+
+ nsteps =                   101
+[PI-INFO] Init time,0,0.146507
+[PI-INFO] Paramount Iteration,3,1,0.141249,0.007518
+[PI-INFO] Paramount Iteration,2,1,0.141764,0.008265
+ it =                     1  || time =    3.3524029668155986E-016  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+ Fields dump in    1.8600007933855522E-007  (s)
+[PI-INFO] Paramount Iteration,0,1,0.155604,0.009098
+[PI-INFO] Paramount Iteration,1,1,0.147188,0.014219
+[PI-INFO] Paramount Iteration,3,2,0.147746,0.006497
+[PI-INFO] Paramount Iteration,2,2,0.148268,0.006504
+[PI-INFO] Paramount Iteration,2,3,0.154770,0.006502
+[PI-INFO] Paramount Iteration,3,3,0.154270,0.006524
+ it =                     2  || time =    6.7048059336311973E-016  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,2,0.162887,0.007283
+[PI-INFO] Paramount Iteration,1,2,0.154485,0.007297
+[PI-INFO] Paramount Iteration,2,4,0.161275,0.006505
+[PI-INFO] Paramount Iteration,3,4,0.160771,0.006501
+ it =                     3  || time =    1.0057208900446796E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,3,0.170166,0.007279
+[PI-INFO] Paramount Iteration,1,3,0.161746,0.007261
+[PI-INFO] Paramount Iteration,2,5,0.167710,0.006435
+[PI-INFO] Paramount Iteration,3,5,0.167194,0.006423
+ it =                     4  || time =    1.3409611867262395E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,4,0.177395,0.007229
+[PI-INFO] Paramount Iteration,1,4,0.169021,0.007275
+[PI-INFO] Paramount Iteration,2,6,0.174214,0.006504
+[PI-INFO] Paramount Iteration,3,6,0.173720,0.006526
+ it =                     5  || time =    1.6762014834077993E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,5,0.184683,0.007288
+[PI-INFO] Paramount Iteration,1,5,0.176306,0.007285
+[PI-INFO] Paramount Iteration,2,7,0.180706,0.006492
+[PI-INFO] Paramount Iteration,3,7,0.180192,0.006472
+ it =                     6  || time =    2.0114417800893593E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,6,0.192084,0.007401
+[PI-INFO] Paramount Iteration,1,6,0.183729,0.007423
+[PI-INFO] Paramount Iteration,3,8,0.186581,0.006389
+[PI-INFO] Paramount Iteration,2,8,0.187098,0.006392
+ it =                     7  || time =    2.3466820767709191E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,7,0.199536,0.007452
+[PI-INFO] Paramount Iteration,1,7,0.191157,0.007428
+[PI-INFO] Paramount Iteration,2,9,0.193582,0.006484
+[PI-INFO] Paramount Iteration,3,9,0.193064,0.006483
+ it =                     8  || time =    2.6819223734524789E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,8,0.206837,0.007301
+[PI-INFO] Paramount Iteration,1,8,0.198466,0.007309
+[PI-INFO] Paramount Iteration,2,10,0.200107,0.006525
+[PI-INFO] Paramount Iteration,3,10,0.199611,0.006547
+ it =                     9  || time =    3.0171626701340387E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,9,0.214155,0.007318
+[PI-INFO] Paramount Iteration,1,9,0.205774,0.007308
+[PI-INFO] Paramount Iteration,3,11,0.206084,0.006473
+[PI-INFO] Paramount Iteration,2,11,0.206606,0.006499
+[PI-INFO] Paramount Iteration,2,12,0.213143,0.006537
+[PI-INFO] Paramount Iteration,3,12,0.212637,0.006553
+ it =                    10  || time =    3.3524029668155985E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,10,0.221520,0.007365
+[PI-INFO] Paramount Iteration,1,10,0.213143,0.007369
+[PI-INFO] Paramount Iteration,3,13,0.219081,0.006444
+[PI-INFO] Paramount Iteration,2,13,0.219591,0.006448
+ it =                    11  || time =    3.6876432634971587E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,11,0.228745,0.007225
+[PI-INFO] Paramount Iteration,1,11,0.220360,0.007217
+[PI-INFO] Paramount Iteration,2,14,0.226127,0.006536
+[PI-INFO] Paramount Iteration,3,14,0.225616,0.006535
+ it =                    12  || time =    4.0228835601787186E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,12,0.235935,0.007190
+[PI-INFO] Paramount Iteration,1,12,0.227524,0.007164
+[PI-INFO] Paramount Iteration,2,15,0.232655,0.006528
+[PI-INFO] PI avg,2,0.006610,15
+[PI-INFO] Beta,2,0.000183
+[PI-INFO] Paramount Iteration,3,15,0.232139,0.006523
+[PI-INFO] PI avg,3,0.006561,15
+[PI-INFO] Beta,3,0.000254
+ it =                    13  || time =    4.3581238568602784E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,13,0.243310,0.007375
+[PI-INFO] Paramount Iteration,1,13,0.234879,0.007355
+ it =                    14  || time =    4.6933641535418382E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,14,0.250513,0.007203
+[PI-INFO] Paramount Iteration,1,14,0.242129,0.007250
+ it =                    15  || time =    5.0286044502233980E-015  || push/part (ns)=                   Infinity  || tot/part (ns)=                   Infinity
+[PI-INFO] Paramount Iteration,0,15,0.257849,0.007336
+[PI-INFO] PI avg,0,0.007423,15
+[PI-INFO] Beta,0,0.000152
+[PI-INFO] Total time,0.257865
+[PI-INFO] Paramount Iteration,1,15,0.249463,0.007334
+[PI-INFO] PI avg,1,0.007766,15
+[PI-INFO] Beta,1,0.000199
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-1-12 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-1-12:18433] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-1-12:18433] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 4 ./fortran_bin/picsar examples/example_decks_fortran/plane_wave_test_2d-4.pixr"
+	User time (seconds): 0.12
+	System time (seconds): 0.07
+	Percent of CPU this job got: 6%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 23668
+	Voluntary context switches: 941
+	Involuntary context switches: 11
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
