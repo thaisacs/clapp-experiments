@@ -1,0 +1,135 @@
+--------------------------------------------------------------------------
+[[32176,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-8-117
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+[PI-INFO] Init time,0,0.144769
+[PI-INFO] Init time,2,0.136532
+[PI-INFO] Init time,3,0.136769
+[PI-INFO] Init time,1,0.139341
+[PI-INFO] Paramount Iteration,0,1,0.253008,0.108239
+[PI-INFO] Paramount Iteration,1,1,0.246568,0.107227
+[PI-INFO] Paramount Iteration,2,1,0.245682,0.109150
+[PI-INFO] Paramount Iteration,3,1,0.245827,0.109058
+[PI-INFO] Paramount Iteration,0,2,0.360451,0.107443
+[PI-INFO] Paramount Iteration,1,2,0.353312,0.106744
+[PI-INFO] Paramount Iteration,2,2,0.352444,0.106762
+[PI-INFO] Paramount Iteration,3,2,0.352583,0.106756
+[PI-INFO] Paramount Iteration,0,3,0.465701,0.105250
+[PI-INFO] Paramount Iteration,1,3,0.458599,0.105287
+[PI-INFO] Paramount Iteration,3,3,0.457821,0.105238
+[PI-INFO] Paramount Iteration,2,3,0.457695,0.105251
+[PI-INFO] Paramount Iteration,0,4,0.570352,0.104651
+[PI-INFO] Paramount Iteration,1,4,0.563232,0.104633
+[PI-INFO] Paramount Iteration,2,4,0.562336,0.104641
+[PI-INFO] Paramount Iteration,3,4,0.562496,0.104675
+[PI-INFO] Paramount Iteration,0,5,0.675821,0.105469
+[PI-INFO] Paramount Iteration,1,5,0.668695,0.105463
+[PI-INFO] Paramount Iteration,2,5,0.667798,0.105462
+[PI-INFO] Paramount Iteration,3,5,0.667927,0.105431
+[PI-INFO] Paramount Iteration,0,6,0.780698,0.104877
+[PI-INFO] Paramount Iteration,1,6,0.773604,0.104909
+[PI-INFO] Paramount Iteration,2,6,0.772672,0.104874
+[PI-INFO] Paramount Iteration,3,6,0.772802,0.104875
+[PI-INFO] Paramount Iteration,0,7,0.886035,0.105337
+[PI-INFO] Paramount Iteration,1,7,0.878905,0.105301
+[PI-INFO] Paramount Iteration,3,7,0.878165,0.105363
+[PI-INFO] Paramount Iteration,2,7,0.878028,0.105356
+[PI-INFO] Paramount Iteration,0,8,0.991267,0.105232
+[PI-INFO] Paramount Iteration,1,8,0.984140,0.105235
+[PI-INFO] Paramount Iteration,2,8,0.983252,0.105224
+[PI-INFO] Paramount Iteration,3,8,0.983384,0.105219
+[PI-INFO] Paramount Iteration,0,9,1.096678,0.105411
+[PI-INFO] Paramount Iteration,1,9,1.089541,0.105401
+[PI-INFO] Paramount Iteration,2,9,1.088654,0.105402
+[PI-INFO] Paramount Iteration,3,9,1.088784,0.105400
+[PI-INFO] Paramount Iteration,0,10,1.201897,0.105219
+[PI-INFO] Paramount Iteration,1,10,1.194777,0.105236
+[PI-INFO] Paramount Iteration,2,10,1.193895,0.105241
+[PI-INFO] Paramount Iteration,3,10,1.194041,0.105257
+[PI-INFO] Paramount Iteration,0,11,1.306485,0.104588
+[PI-INFO] Paramount Iteration,1,11,1.299362,0.104585
+[PI-INFO] Paramount Iteration,2,11,1.298471,0.104576
+[PI-INFO] Paramount Iteration,3,11,1.298601,0.104560
+[PI-INFO] Paramount Iteration,0,12,1.412009,0.105524
+[PI-INFO] Paramount Iteration,1,12,1.404873,0.105511
+[PI-INFO] Paramount Iteration,2,12,1.404002,0.105531
+[PI-INFO] Paramount Iteration,3,12,1.404145,0.105544
+[PI-INFO] Paramount Iteration,0,13,1.517196,0.105187
+[PI-INFO] Paramount Iteration,1,13,1.510064,0.105191
+[PI-INFO] Paramount Iteration,2,13,1.509163,0.105161
+[PI-INFO] Paramount Iteration,3,13,1.509291,0.105146
+[PI-INFO] Paramount Iteration,0,14,1.621764,0.104568
+[PI-INFO] Paramount Iteration,1,14,1.614656,0.104592
+[PI-INFO] Paramount Iteration,2,14,1.613745,0.104582
+[PI-INFO] Paramount Iteration,3,14,1.613875,0.104584
+[PI-INFO] Paramount Iteration,0,15,1.726997,0.105233
+[PI-INFO] PI avg,0,0.105482,15
+[PI-INFO] Beta,0,0.000008
+[PI-INFO] Total time,1.727009
+[PI-INFO] Paramount Iteration,1,15,1.719871,0.105215
+[PI-INFO] PI avg,1,0.105369,15
+[PI-INFO] Beta,1,0.000007
+[PI-INFO] Paramount Iteration,2,15,1.718992,0.105247
+[PI-INFO] PI avg,2,0.105497,15
+[PI-INFO] Beta,2,0.000007
+[PI-INFO] Paramount Iteration,3,15,1.719110,0.105235
+[PI-INFO] PI avg,3,0.105489,15
+[PI-INFO] Beta,3,0.000008
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node ip-172-31-8-117 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
+[ip-172-31-8-117:18440] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-8-117:18440] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+Command exited with non-zero status 1
+	Command being timed: "mpirun --hostfile /home/ubuntu/PI-Bench/ECP-Proxy-Apps/hostfile -n 4 ./macsio/macsio --num_dumps 3000"
+	User time (seconds): 1.50
+	System time (seconds): 0.09
+	Percent of CPU this job got: 36%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 7692
+	Voluntary context switches: 948
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 157632
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
